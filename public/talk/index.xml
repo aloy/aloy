@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Recent &amp; Upcoming Talks on Adam Loy</title>
+    <link>/talk/</link>
+    <description>Recent content in Recent &amp; Upcoming Talks on Adam Loy</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2017 Adam Loy</copyright>
+    <lastBuildDate>Sun, 01 Jan 2017 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/talk/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Training Statisticians to Be Effective Instructors</title>
+      <link>/talk/2017-jsm-panel/</link>
+      <pubDate>Mon, 31 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/talk/2017-jsm-panel/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Modules for Infusing Data Science into the Statistics Curriculum</title>
+      <link>/talk/2017-uscots/</link>
+      <pubDate>Mon, 15 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/talk/2017-uscots/</guid>
+      <description>&lt;script async class=&#34;speakerdeck-embed&#34; data-id=&#34;d16c0455542946b68d5a068492b12a3e&#34; data-ratio=&#34;1.33333333333333&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Making Decisions with Data: Planning for Collaborative Courses in Data Science</title>
+      <link>/talk/2017-teagle/</link>
+      <pubDate>Sat, 29 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/talk/2017-teagle/</guid>
+      <description>&lt;script async class=&#34;speakerdeck-embed&#34; data-id=&#34;208a4ab09cea4f80b0e38be71f0fa304&#34; data-ratio=&#34;1.33333333333333&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

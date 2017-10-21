@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Adam Loy on Adam Loy</title>
+    <link>/</link>
+    <description>Recent content in Adam Loy on Adam Loy</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2017 Adam Loy</copyright>
+    <lastBuildDate>Wed, 20 Apr 2016 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Data Science for Statistics</title>
+      <link>/project/ds4stats/</link>
+      <pubDate>Sat, 21 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/project/ds4stats/</guid>
+      <description>&lt;p&gt;Write an extended description down here&amp;hellip;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Trial post</title>
+      <link>/post/hello-world/</link>
+      <pubDate>Sat, 21 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/post/hello-world/</guid>
+      <description>&lt;div id=&#34;hello-world&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;0.1&lt;/span&gt; Hello world!&lt;/h2&gt;
+&lt;p&gt;Some text…&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>lmeresampler: Bootstrapping Clustered Data in R</title>
+      <link>/project/lmeresampler/</link>
+      <pubDate>Sat, 21 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/project/lmeresampler/</guid>
+      <description>&lt;p&gt;Longer description down here&amp;hellip;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Training Statisticians to Be Effective Instructors</title>
+      <link>/talk/2017-jsm-panel/</link>
+      <pubDate>Mon, 31 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/talk/2017-jsm-panel/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Model Choice and Diagnostics for Linear Mixed-Effects Models Using Statistics on Street Corners</title>
+      <link>/publication/2017-jcgs/</link>
+      <pubDate>Fri, 19 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/2017-jcgs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Modules for Infusing Data Science into the Statistics Curriculum</title>
+      <link>/talk/2017-uscots/</link>
+      <pubDate>Mon, 15 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/talk/2017-uscots/</guid>
+      <description>&lt;script async class=&#34;speakerdeck-embed&#34; data-id=&#34;d16c0455542946b68d5a068492b12a3e&#34; data-ratio=&#34;1.33333333333333&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Making Decisions with Data: Planning for Collaborative Courses in Data Science</title>
+      <link>/talk/2017-teagle/</link>
+      <pubDate>Sat, 29 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/talk/2017-teagle/</guid>
+      <description>&lt;script async class=&#34;speakerdeck-embed&#34; data-id=&#34;208a4ab09cea4f80b0e38be71f0fa304&#34; data-ratio=&#34;1.33333333333333&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Variations of Q-Q Plots: The Power of Our Eyes!</title>
+      <link>/publication/2016-tas-qq-plots/</link>
+      <pubDate>Thu, 09 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/2016-tas-qq-plots/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>qqplotr: ggplot2 Compatible Quantile-Quantile plots in R</title>
+      <link>/project/qqplotr/</link>
+      <pubDate>Wed, 11 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/project/qqplotr/</guid>
+      <description>&lt;p&gt;Longer description here&amp;hellip;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Are You Normal? The Problem of Confounded Residual Structures in Hierarchical Linear Models</title>
+      <link>/publication/2015-jcgs-normality/</link>
+      <pubDate>Thu, 10 Dec 2015 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/2015-jcgs-normality/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Upper Midwest Climate Variations: Farmer Responses to Excess Water Risks</title>
+      <link>/publication/2015-jeq/</link>
+      <pubDate>Fri, 13 Mar 2015 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/2015-jeq/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Understanding Corn Belt farmer perspectives on climate change to inform engagement strategies for adaptation and mitigation</title>
+      <link>/publication/2014-jswc-6americas/</link>
+      <pubDate>Thu, 13 Mar 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/2014-jswc-6americas/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Model Choice and Diagnostics for Linear Mixed-Effects Models Using Statistics on Street Corners</title>
+      <link>/publication/2014-jss-hlmdiag/</link>
+      <pubDate>Sat, 25 Jan 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/2014-jss-hlmdiag/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Climate change beliefs, risk perceptions, and attitudes toward adaptation and mitigation among farmers in the midwestern United States</title>
+      <link>/publication/2013-cc-cscap/</link>
+      <pubDate>Sat, 16 Feb 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/2013-cc-cscap/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Diagnostic Tools for Hierarchical Linear Models</title>
+      <link>/publication/2013-wires-lit-review/</link>
+      <pubDate>Tue, 01 Jan 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/2013-wires-lit-review/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

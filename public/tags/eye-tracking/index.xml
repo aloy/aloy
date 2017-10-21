@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Eye Tracking on Adam Loy</title>
+    <link>/tags/eye-tracking/</link>
+    <description>Recent content in Eye Tracking on Adam Loy</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2017 Adam Loy</copyright>
+    <lastBuildDate>Sat, 21 Oct 2017 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/eye-tracking/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>lmeresampler: Bootstrapping Clustered Data in R</title>
+      <link>/project/lmeresampler/</link>
+      <pubDate>Sat, 21 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/project/lmeresampler/</guid>
+      <description>&lt;p&gt;Longer description down here&amp;hellip;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
