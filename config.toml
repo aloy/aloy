@@ -145,6 +145,11 @@ defaultContentLanguageInSubdir = false
     link = "http://orcid.org/0000-0002-5780-4611"
     
   [[params.social]]
+    icon = "arxiv"
+    icon_pack = "ai"
+    link = "https://arxiv.org/find/stat/1/au:+Loy_A/0/1/0/all/0/1"
+    
+  [[params.social]]
     icon = "linkedin"
     icon_pack = "fa"
     link = "https://www.linkedin.com/in/adam-loy-43059b4a/"
