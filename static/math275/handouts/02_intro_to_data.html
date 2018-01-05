@@ -223,9 +223,7 @@ This is another important idea that we’ll return to later.</p>
 <!-- ``` -->
 <!-- We could have accomplished this in two steps by saving the table in one line and -->
 <!-- applying `mosaicplot` in the next (see the table/barplot example above). -->
-<ol start="3" style="list-style-type: decimal">
-<li>What does the mosaic plot reveal about smoking habits and gender?</li>
-</ol>
+<!-- 3.  What does the mosaic plot reveal about smoking habits and gender? -->
 </div>
 <div id="interlude-how-r-thinks-about-data" class="section level2">
 <h2>Interlude: How R thinks about data</h2>
@@ -294,12 +292,21 @@ This is another important idea that we’ll return to later.</p>
 <ol start="4" style="list-style-type: decimal">
 <li>What does this boxplot show? Pick another categorical variable from the data set and see how it relates to BMI. List the variable you chose, why you might think it would have a relationship to BMI, and indicate what the figure seems to suggest.</li>
 </ol>
-<p>Finally, let’s make some histograms. We can look at the histogram for the age of our respondents with the command</p>
+<p>In addition to looking at side-by-side boxplots, you may wish to calculate summary statistics for each group. For example, we can calculate the median BMI for each health category usiing the below command:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">tapply</span>(cdc<span class="op">$</span>bmi, <span class="dt">INDEX =</span> cdc<span class="op">$</span>genhlth, <span class="dt">FUN =</span> median)</code></pre></div>
+<ol start="5" style="list-style-type: decimal">
+<li>Calculate the mean and standard deviation of weight by general health status. What do you notice?</li>
+</ol>
+<p>Next, let’s make some histograms. We can look at the histogram for the age of our respondents with the command</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">hist</span>(cdc<span class="op">$</span>age, <span class="dt">xlab =</span> <span class="st">&quot;Age&quot;</span>, <span class="dt">main =</span> <span class="st">&quot;Distribution of age&quot;</span>)</code></pre></div>
 <p>Histograms are generally a very good way to see the shape of a single distribution, but that shape can change depending on how the data is split between the different bins. You can control the number of bins by adding an argument to the command. In the next two lines, we first make a default histogram of <code>bmi</code> and then one with 50 breaks.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">hist</span>(cdc<span class="op">$</span>bmi, <span class="dt">xlab =</span> <span class="st">&quot;BMI&quot;</span>, <span class="dt">main =</span> <span class="st">&quot;Distribution of BMI&quot;</span>)
 <span class="kw">hist</span>(cdc<span class="op">$</span>bmi, <span class="dt">breaks =</span> <span class="dv">50</span>, <span class="dt">xlab =</span> <span class="st">&quot;BMI&quot;</span>, <span class="dt">main =</span> <span class="st">&quot;Distribution of BMI&quot;</span>)</code></pre></div>
 <p>Note that you can flip between plots that you’ve created by clicking the forward and backward arrows in the lower right region of RStudio, just above the plots. How do these two histograms compare?</p>
+<p>Finally, let’s consider scatterplots to display the relationship between two quantitative variables. We can look at the relationship between height and weight with the command</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">plot</span>(<span class="dt">x =</span> cdc<span class="op">$</span>height, <span class="dt">y =</span> cdc<span class="op">$</span>weight, 
+     <span class="dt">xlab =</span> <span class="st">&quot;Height (in inches)&quot;</span>, <span class="dt">ylab =</span> <span class="st">&quot;Weight (in lbs)&quot;</span>)</code></pre></div>
+<p>As expected height and weight are positively associated (i.e., taller folks tend to weight more).</p>
 <p>At this point, we’ve done a good first pass at analyzing the information in the BRFSS questionnaire. We’ve found an interesting association between smoking and gender, and we can say something about the relationship between people’s assessment of their general health and their own BMI. We’ve also picked up essential computing tools – summary statistics, subsetting, and plots – that will serve us well throughout this course.</p>
 <hr />
 </div>
