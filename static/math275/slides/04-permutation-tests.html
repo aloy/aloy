@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Permutation Tests</title>
+    <meta charset="utf-8">
+    <link href="libs/remark-css/example.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Permutation Tests
+## Math 275, Winter 2018
+
+---
+
+
+
+
+background-image: url(figs/perm-test-ex1.png)
+background-position: 50% 50%
+class: center, bottom
+
+
+---
+
+## Exploring the data
+
+
+```r
+mosquitoes &lt;- read.csv("../data/mosquitoes_beer.csv")
+head(mosquitoes)
+```
+
+```
+##   treatment count
+## 1      beer    27
+## 2      beer    19
+## 3      beer    20
+## 4      beer    20
+## 5      beer    23
+## 6      beer    17
+```
+
+```r
+summary(mosquitoes)
+```
+
+```
+##  treatment      count      
+##  beer :25   Min.   :12.00  
+##  water:18   1st Qu.:19.00  
+##             Median :21.00  
+##             Mean   :21.77  
+##             3rd Qu.:24.00  
+##             Max.   :31.00
+```
+
+---
+
+## Exploring the data
+
+
+```r
+boxplot(mosquitoes$count ~ mosquitoes$treatment, horizontal = TRUE,
+        xlab = "No. of mosquitoes", ylab = "Treatment",
+        main = "Distribution of mosquitoes by treatment")
+```
+
+![](04-permutation-tests_files/figure-html/unnamed-chunk-2-1.svg)&lt;!-- --&gt;
+
+---
+
+## Exploring the data
+
+
+```r
+tapply(mosquitoes$count, INDEX = mosquitoes$treatment, FUN = summary)
+```
+
+```
+## $beer
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##    17.0    20.0    24.0    23.6    27.0    31.0 
+## 
+## $water
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##   12.00   16.50   20.00   19.22   22.00   24.00
+```
+
+
+---
+class: center, middle
+
+# Are the treatment groups really different or are the differences due to random chance?
+
+---
+
+
+## Permutation test algorithm
+
+1. Pool the `\(m+n\)` data values
+
+1. Draw a resample of size `\(m\)` without replacement, assign these values to group 1. Assign the remaining `\(n\)` values to group 2.
+
+1. Calculate the test statistic comparing the samples from the resampled groups.
+
+1. Repeat steps 2 and 3 until we have enough samples.
+
+1. Estimate the p-value as the proportion of times the observed test statistic exceeds the original (observed) test statistic
+
+`$$\frac{\text{# statistics that exceed the original} + 1}{\text{# of statistics in the distribution} + 1}$$`
+
+---
+
+## Permutation test in R
+
+#### 1. Calculate the observed difference in means
+
+
+```r
+beer &lt;- subset(mosquitoes, treatment == "beer")
+water &lt;- subset(mosquitoes, treatment == "water")
+observed &lt;- mean(beer$count) - mean(water$count)
+observed
+```
+
+```
+## [1] 4.377778
+```
+
+---
+
+## Permutation test in R
+
+#### 2. Use a for loop to run the permutations
+
+
+```r
+N &lt;- 10^5 - 1        # number of resamples
+result &lt;- numeric(N) # place to store results
+for(i in 1:N) {
+  index &lt;- sample(nrow(mosquitoes), size = 25, replace = FALSE)
+  result[i] &lt;- mean(mosquitoes$count[index]) - 
+    mean(mosquitoes$count[-index])
+}
+
+head(result)
+```
+
+```
+## [1] -2.4066667 -1.6422222  2.1800000  0.7466667 -0.4000000 -0.4955556
+```
+
+---
+
+## Permutation test in R
+
+#### 3. Plot the permutation (null) distribution
+
+
+```r
+hist(result, col = "gray", main = "Permutation distribution", 
+     xlab = "Difference in means")
+abline(v = observed, col = "red", lwd = 2)
+```
+
+![](04-permutation-tests_files/figure-html/unnamed-chunk-6-1.svg)&lt;!-- --&gt;
+
+---
+
+## Permutation test in R
+
+#### 4. Calculate the p-value
+
+
+```r
+(sum(result &gt;= observed) + 1) / (N + 1)
+```
+
+```
+## [1] 0.00052
+```
+    </textarea>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {window.dispatchEvent(new Event('resize'));});
+(function() {var d = document, s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler"); if (!r) return; s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }"; d.head.appendChild(s);})();</script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+  }
+});
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
