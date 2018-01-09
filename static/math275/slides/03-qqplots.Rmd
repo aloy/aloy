@@ -45,7 +45,9 @@ Could the sample plausibly follow a normal distribution?
 
 <img src="http://aloy.rbind.io/math275/slides/figs/example-heavy-tail.pdf" alt="some text"  width="400" height="400">
 
+
 ---
+
 
 # Example 2
 
