@@ -1,0 +1,172 @@
+---
+title: "Review of R/RStudio and EDA"
+output:
+  pdf_document: default
+margin: .8in
+---
+
+# Overview of R Markdown files
+
+In this course we will often work with R markdown files in class. 
+
+Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Cmd/Cntrl+Shift+Enter*. 
+
+```{r}
+1:10
+```
+
+Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Cmd/Cntrl+Option+I*.
+
+When you save the notebook, a file containing the code **and** output will be saved alongside it (click the *Preview* button or press *Cmd+Shift+K* to preview the PDF file; you may need to change the output type to HTML or Word if you don't have LaTeX installed on your computer).
+
+
+# Your First R session
+
+While you are learning the R language, remember that you are learning a new language; thus, we will start rather simply with small analysis tasks and build up to more complicated tasks. Also, you will not remember everything immediately---that's OK, it's a natural part of learning a language! 
+
+## Installing and loading R packages
+
+R does not enable all of its functionality when you open it. To enable additional functionality we need to load *R packages*. In this class we will often use the `dplyr` R package to enable better tools for data manipulation and the `ggformula` package to enable better tools for plotting. Below is an example of installation and loading:
+
+```{r message=FALSE, eval=FALSE}
+# You only need to install a package once
+# If you use the server, then these packages are already installed
+install.packages("dplyr")
+install.packages("ggformula")
+```
+
+```{r, message=FALSE}
+# You will need to load the package in each R markdown notebook
+library(dplyr)
+library(ggformula)
+```
+
+Note: I added the `message = FALSE` argument to this code chunk to avoid unnecessary messages
+
+
+## Loading data and assignment
+
+Regression models are fit to data sets, so data will play a central role in this course. There are multiple ways to load data sets (and we'll learn more about them later), but we often need to load a `.csv` (comma separated value) file.
+
+Today, we'll look at a data set containing information on health evaluation and linkage to primary care.
+
+```{r}
+# Load the data and assign it a name
+HELPrct <- read.csv("https://aloy.rbind.io/data/HELPrct.csv")
+```
+
+
+## Data frames
+
+The `HELPrct` object is our first example of a data frame, which is essentially a list of vectors. We can get a first glimpse of our data set in a few ways:
+
+```{r eval=FALSE}
+# Printing the first 6 rows
+# Note that missing values are denoted by NA
+head(HELPrct)
+```
+
+```{r eval=FALSE}
+# Looking at the number of rows and columns
+dim(HELPrct)
+```
+
+```{r eval=FALSE}
+# Looking at the structure
+str(HELPrct)
+```
+
+```{r eval=FALSE}
+# looking at quick summary statistics
+summary(HELPrct)
+```
+
+
+# Exploring the Data
+
+In this course, we’ll work with data sets that have a combination of quantitative and categorical variables. Oftentimes, an important first step (before doing any analysis) is to explore the data. Here are some plots and summary statistics that are frequently used to visually display the data.
+
+## Univariate summaries
+
+### Categorical variables
+```{r fig.height=2, fig.width=3}
+table(HELPrct$sex)
+gf_bar(~ sex, data = HELPrct)
+```
+
+### Quantitative variables
+```{r}
+summary(HELPrct$age)
+sd(HELPrct$age)
+```
+```{r eval=FALSE}
+gf_histogram(~ age, data = HELPrct)
+gf_density(~ age, data = HELPrct)
+```
+
+```{r echo=FALSE, fig.height = 2, fig.width = 6, message=FALSE}
+p1 <- gf_histogram(~ age, data = HELPrct)
+p2 <- gf_density(~ age, data = HELPrct)
+library(gridExtra)
+grid.arrange(p1, p2, ncol=2)
+```
+
+
+
+## Bivariate summaries
+
+### Categorical vs. categorical
+```{r fig.height=2, fig.width=3}
+table(HELPrct$sex, HELPrct$substance)
+```
+
+```{r eval=FALSE}
+gf_bar( ~ substance, data = HELPrct, fill = ~sex)
+gf_bar( ~ substance, data = HELPrct, fill = ~sex, position = position_dodge())
+gf_bar( ~ substance, data = HELPrct, fill = ~sex, position = position_fill())
+```
+
+
+```{r echo=FALSE, fig.height = 2, fig.width = 9}
+library(viridis)
+cc1 <- gf_bar( ~ substance, data = HELPrct, fill = ~sex) + 
+  scale_fill_viridis(discrete = TRUE)
+cc2 <- gf_bar( ~ substance, data = HELPrct, fill = ~sex, position = position_dodge()) +
+  scale_fill_viridis(discrete = TRUE)
+cc3 <- gf_bar( ~ substance, data = HELPrct, fill = ~sex, position = position_fill()) +
+  scale_fill_viridis(discrete = TRUE)
+grid.arrange(cc1, cc2, cc3, ncol=3)
+```
+
+
+### Quantitative vs. categorical
+
+```{r fig.height=2, fig.width=3}
+# Using dplyr
+HELPrct %>%
+  group_by(racegrp) %>%
+  summarize(min = min(age),
+            Q1 = quantile(age, prob = .25),
+            median = median(age),
+            Q3 = quantile(age, prob = .75),
+            max = max(age),
+            mean = mean(age),
+            sd = sd(age),
+            n = length(age))
+gf_boxplot(age ~ racegrp, data = HELPrct)
+```
+
+
+### Quantitative vs. Quantitative
+
+```{r fig.height=2, fig.width=3}
+cor(HELPrct$i1, HELPrct$age)
+gf_point(i1 ~ age, data = HELPrct)
+```
+
+<!-- **Helpful Tips** -->
+
+<!-- - R is case sensitive: `x` is not the same thing as `X`. -->
+<!-- - In the console, `>` means R is ready for a new command, whereas `+` means R is waiting for you to finish an existing command. Hitting ESC gets you out of the latter scenario if you’re there by accident. -->
+<!-- - Not sure what a function like `summary()` does? Type the function name preceded by a question mark, like this: `?summary` to get help. Scroll down to Examples – replicate some of these on your own. -->
+<!-- - If R throws you an error, read it before you panic. Usually, the error is more interpretable than you think! -->

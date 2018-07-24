@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Introduction To R/RStudio</title>
+    <meta charset="utf-8">
+    <link href="libs/remark-css/example.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Introduction To R/RStudio
+## Math 275, Winter 2018
+
+---
+
+
+
+
+# Recommended workflow
+
+1. Create an R project to keep your files organized (this creates a new folder)
+ 
+1. Keep all of your data (inputs) in a `data/` folder
+
+1. Download/create an R markdown (.Rmd) file to house both your thoughts and your R code; this will keep both your work and your final products in one place
+
+1. While you're writing your code (i.e. writing your analysis) run the chunks in the console; when you are finished, knit to Word or PDF
+
+
+.footnote[
+  Tip: don't use spaces in file names, use underscores or dashes
+]
+
+---
+class: center, middle
+
+# R markdown
+
+---
+
+# Why?
+
+* The analysis is self-documenting
+
+* It's easy to extend or refine analyses by copying and modifying code blocks
+
+* The analysis can be disseminated by providing the RMarkdown file and data sources
+
+* The results can also be shared as HTML (fully self contained), PDF, or Word if just a summary of the analysis is needed
+
+.footnote[
+From "Connecting data, analysis, and results using a reproducible framework", Mine Çetinkaya-Rundel and Nicholas Horton 
+]
+
+
+---
+
+# YAML header
+
+
+The YAML header stores the necessary metadata for your document
+
+* Always start and end with three hyphens `---`
+
+* Put the text for the title, author, and date in quotes
+
+* Let RStudio take care of the indentation for you
+
+
+  
+```yaml
+---
+title: "My First RMarkdown Document"
+author: "Adam Loy"
+date: "01/05/18"
+output: html_document
+---
+```
+
+---
+
+## Headers (titles)
+
+Headers start with hashtags
+
+```md
+# Top-level header 
+
+## A second-level header
+
+### A third-level header
+```
+
+--
+
+## Text
+
+Write your thoughts in plain text
+
+---
+
+# Mathematical expressions
+
+You can write mathematical expressions using [LaTeX](https://en.wikibooks.org/wiki/LaTeX) code
+
+```latex
+$\alpha + \beta$
+```
+
+`\(\alpha + \beta\)`
+
+```latex
+$\bar{X}=\frac{1}{n}\sum_{i=1}^nX_i$
+```
+
+`\(\bar{X}=\frac{1}{n}\sum_{i=1}^nX_i\)`
+
+```latex
+$S^2 = \frac{1}{n-1} \sum_{i=1}^n (X_i - \bar{X}_n)^2$
+```
+
+`\(S^2 = \frac{1}{n-1} \sum_{i=1}^n (X_i - \bar{X}_n)^2\)`
+
+
+---
+
+# Code chunks
+
+
+    ```{r}
+    1 + 2 * 3
+    20:30
+    mean(rnorm(20))
+    ```
+
+* Always begin and end with three backticks
+
+* Additional options can be placed inside of the brackets
+
+* The lines wrapped inside the beginning and closing three backticks must be R code that you could run in the R Console.
+    </textarea>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {window.dispatchEvent(new Event('resize'));});
+(function() {var d = document, s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler"); if (!r) return; s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }"; d.head.appendChild(s);})();</script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+  }
+});
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

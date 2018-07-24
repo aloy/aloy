@@ -1,0 +1,52 @@
+---
+title: "Day 01 Activity"
+author: "Math 245, Adam Loy"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+#### Instructions
+
+Explore the `HELPrct` data set to try to
+find some interesting insights. You may want to check out the codebook on Moodle to get
+a glimpse at what this data set contains. Next, start exploring the data set using plots,
+tables, and other numeric summaries. Select three of your favorite plots and tell a story 
+(in writing) about each of them. 
+
+
+```{r message=FALSE}
+# load the data set from the url
+HELPrct <- read.csv("https://aloy.rbind.io/data/HELPrct.csv")
+
+# loading the necessary packages
+library(ggformula)
+library(dplyr)
+```
+
+
+## PLOT 1
+
+```{r}
+# put the code for your plot here
+```
+
+(Include the description for your plot here.)
+
+
+## PLOT 2
+
+```{r}
+# put the code for your plot here
+```
+(Include the description for your plot here.)
+
+
+## PLOT 3
+
+```{r}
+# put the code for your plot here
+```
+(Include the description for your plot here.)

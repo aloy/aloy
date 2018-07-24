@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Introduction to Statistical Inference</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Adam Loy" />
+    <link href="libs/remark-css/example.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Introduction to Statistical Inference
+## Math 275, Winter 2018
+### Adam Loy
+
+---
+
+
+
+
+# Three prongs of statistics
+
+1. **Design** &lt;br&gt;
+The design of surveys/experiments and collection of data to more efficiently/correctly address scientific questions &lt;br/&gt; &lt;br/&gt;
+
+2. **Exploratory statistics** &lt;br&gt;
+Understand the major features of and detect patterns in data &lt;br/&gt; &lt;br/&gt;
+
+3. **Inferential statistics** &lt;br&gt;
+Account for randomness, variability, and bias in a sample in order to draw reasonable and correct conclusions about a population
+
+
+---
+
+# Statistics vs. probability
+
+&lt;br/&gt;
+
+#### Probability (Math 265)
+
+We learned how to calculate the probability of seeing a result (data) given a specific probability model (e.g., a specific distribution)
+
+&lt;br/&gt;
+
+#### Statistics (Math 275)
+
+We will learn how to make statements about the underlying probability models given the data we see
+
+---
+
+# Example: Spies vs. Statisticians
+
+During WWII, the Allies wanted to determine production rates of tanks (and airplanes, missiles, etc.)
+
+&lt;br/&gt;
+
+### Spies
+Gathered intelligence (intercepted messages, interrogated of prisoners, etc.) and made the following estimates:
+
+* June 1940: 1000
+
+* June 1941: 1550
+
+* August 1942: 1550
+
+---
+
+# Example: Spies vs. Statisticians
+
+### Statisticians
+
+* The Allies had a sample of serial numbers (via capture, photography, etc.), `\(X_1, X_2, \ldots, X_n\)`, and there were `\(N\)` produced.
+
+* Allied statisticians needed to devise an **estimator** to obtain `\(N\)`
+
+* Ultimately, they used
+
+
+`$$\hat{N} = X_{\text{max}} + \dfrac{X_{\text{max}}}{n} - 1$$`
+
+
+to get estimates
+
+* June 1940: 169
+* June 1941: 244
+* August 1942: 327
+
+
+---
+
+# Example: Spies vs. Statisticians
+
+
+After the war, the Allies discovered documents revealing the true number of tanks produced:
+
+
+Month | Truth | Statisticians | Spies
+----- | :----: | :----: | :----:
+June 1940    | 122 | 169 | 1000
+June 1941    | 271 | 244 | 1550
+August 1942 | 342 | 327 | 1550
+
+
+---
+
+# The big picture
+
+![](01-stat-thought_files/figure-html/big-picture.png)
+
+
+.footnote[
+  
+Kass, Robert E. Statistical Inference: The Big Picture. *Statist. Sci.* 26 (2011), no. 1, 1-9
+]
+
+---
+
+# Statistical models
+
+A statistical model consists of
+
+* a collection of random variables to describe observable data,
+
+* the possible joint distribution(s) of the random variables,
+
+* and the parameters, `\(\boldsymbol \theta\)`, that define those distributions
+
+(Morris and DeGroot, 377)
+
+---
+
+# Types of Inference in Math 275
+
+
+#### Parametric
+
+&gt; The basic idea of nonparametric inference is to use data to infer an unknown quantity while making as few assumptions as possible. Usually, this means using statistical models that are infinite-dimensional.  (Wasserman, 2006)
+
+&lt;br&gt;
+
+#### Nonparametric
+
+&gt; A parametric inference uses models that consist of a set of distributions/densities that can be parameterized by a finite number of parameters.
+
+
+---
+
+# Types of Inference in Math 275
+
+
+.pull-left[
+**Frequentist Paradigm**
+
+* Probability refers to limiting relative frequencies `\(\implies\)` "objective"
+
+* Parameters are fixed, unknown constants &lt;br/&gt; &lt;br/&gt; &lt;br/&gt;
+
+* Statistical procedures are designed to have well-defined long-run frequency properties
+]
+
+.pull-right[
+**Bayesian Paradigm**
+
+* Probability describes a degree of belief `\(\Longrightarrow\)` "subjective" &lt;br/&gt; &lt;br/&gt;
+
+* Parameters are random variables because they are quantities about which we are uncertain
+
+* Inferences for a parameter are made by producing a probability distribution for it 
+]
+
+---
+
+# Tentative schedule
+
+Topic | Chapters | Approx. Duration
+----- | :--------: | :------------:
+Exploratory Data Analysis | 1-2 | 1 week 
+Nonparametric inference | 3-5 | 3 weeks 
+Frequentist inference | 6-8 | 5 weeks 
+Bayesian inference | 10, supplements | 1 week 
+
+
+---
+
+class: center, middle
+
+# Types of Studies
+
+---
+
+## Experimental
+
+Investigators apply treatments to experimental units (people,
+animals, plots of land, etc.) and then proceed to observe the effect of the 
+treatments on the experimental units
+
+--
+
+&lt;br&gt;
+
+## Observational 
+
+Investigators
+observe subjects and measure variables
+of interest without assigning treatments to
+the subjects. The "treatment" that each
+subject receives is determined beyond the
+control of the investigator.
+
+
+---
+
+class: center, middle
+
+# Syllabus Highlights
+
+---
+
+# Logistics
+
+* Contact me: [aloy@carleton.edu](emailto:aloy@carleton.edu)
+
+* Course materials and announcements on [Moodle](https://moodle.carleton.edu/course/view.php?id=26566)
+
+* Q &amp; A for R on Piazza (linked through Moodle)
+
+* Office hours are in CMC 218
+
+
+.pull-left[
+Day | Time
+---- | ----
+Monday    | 9:00-10:00
+Tuesday   | 2:30-4:00
+Wednesday | 3:00-4:00
+Friday    | 9:00-10:30
+]
+
+---
+
+# Required materials
+
+#### Textbook
+
+*Mathematical Statistics with Resampling and R*, Laura M. Chihara and Tim C. Hesterberg, 2011, Wiley, ISBN 978-1-118-02985-5.
+
+&lt;br&gt;
+
+#### Access to R
+
+* Cloud-based RStudio server: [https://mirage.mathcs.carleton.edu](https://mirage.mathcs.carleton.edu)
+
+* You can [download](https://ismayc.github.io/rbasics-book/3-rstudiobasics.html#what-is-rstudio) your own version of R and RStudio
+
+* If you don't have a laptop, you can borrow a chromebook from ITS and use the RStudio server
+
+---
+
+# Assessment
+
+#### Homework (15%)
+* Due roughly every other class
+
+* No late work accepted without a valid excuse
+
+* Most applications will use R	
+
+
+#### Data Analysis Report (10%)
+
+* Propose research questions about a topic of your own choosing
+
+* Compile an dataset that can address these questions
+
+* Analyze the data to answer your questions
+
+---
+
+# Assessment
+   
+#### Exams (75%)
+* Two midterms (22.5% each) and a final (30%)
+
+* Midterm #1 - Wednesday, January 24
+
+* Midterm #2 - Wednesday, February 14
+
+* Final will be Tuesday, March 13 at 8:30 a.m. (this is not a self-scheduled exam to allow for a note sheet)
+    </textarea>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {window.dispatchEvent(new Event('resize'));});
+(function() {var d = document, s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler"); if (!r) return; s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }"; d.head.appendChild(s);})();</script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+  }
+});
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
