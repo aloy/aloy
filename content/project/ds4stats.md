@@ -6,7 +6,7 @@ date = "2017-10-21"
 title = "Data Science for Statistics"
 
 # Project summary to display on homepage.
-summary = "Give brief description of the project..."
+summary = "Tutorials and case studies teaching data-scientific concepts in statistics courses."
 
 # Optional image to display on homepage (relative to `static/img/` folder).
 image_preview = ""
@@ -28,4 +28,6 @@ caption = ""
 
 +++
 
-Write an extended description down here...
+[Shonda Kuiper](https://www.grinnell.edu/users/kuipers), [Laura Chihara](http://www.people.carleton.edu/~lchihara/) and I developed a series of tutorials and case studies that can be used in a variety of courses to introduce data-scientific concepts. You can find these materials on [Github](https://github.com/ds4stats). 
+
+This work was funded by grants from the Associated Colleges of the Midwest and the Teagle Foundation.

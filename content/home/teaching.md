@@ -10,10 +10,17 @@ subtitle = ""
 widget = "custom"
 
 # Order that this section will appear in.
-weight = 60
+weight = 10
 
 +++
 
-I am currently teaching the following courses at Carleton:
+During fall 2018 teaching the following courses at Carleton:
 
+- Math 215: Introduction to statistics
+- Math 315: Bayesian statistics
+
+Past courses that I have taught at Carleton:
+
+- Math 245: Applied regression
 - Math 265: Probability
+- Math 275: Introduction to statistical inference

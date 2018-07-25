@@ -37,5 +37,5 @@ weight = 1
 
 # About me
 
-Hi! I'm an Assistant Professor of Statistics in the Department of Mathematics and Statistics at Carleton College. I teach statistics at all levels of the curriculum and am passionate about communicating the beauty and power of modern statistical methods to students. My research focuses on incorporating realistic computation and visualization into the classroom, exploring the potential of visual inference, developing better visualizations to explore complex models, and developing useful and useable R packages.
+Hi! I'm an Assistant Professor of Statistics in the Department of Mathematics and Statistics at Carleton College. I teach statistics at all levels of the curriculum and am passionate about communicating the beauty and power of modern statistical methods to my students. My research focuses on incorporating realistic computation and visualization into the classroom, exploring the potential of visual inference, developing better visualizations to explore complex models, and developing useful and useable R packages.
 

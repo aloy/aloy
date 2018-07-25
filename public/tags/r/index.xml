@@ -6,7 +6,7 @@
     <description>Recent content in R on Adam Loy</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>&amp;copy; 2017 Adam Loy</copyright>
+    <copyright>&amp;copy; 2018 Adam Loy</copyright>
     <lastBuildDate>Sat, 21 Oct 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="/tags/r/" rel="self" type="application/rss+xml" />
     
@@ -16,7 +16,9 @@
       <pubDate>Sat, 21 Oct 2017 00:00:00 +0000</pubDate>
       
       <guid>/project/ds4stats/</guid>
-      <description>&lt;p&gt;Write an extended description down here&amp;hellip;&lt;/p&gt;
+      <description>&lt;p&gt;&lt;a href=&#34;https://www.grinnell.edu/users/kuipers&#34; target=&#34;_blank&#34;&gt;Shonda Kuiper&lt;/a&gt;, &lt;a href=&#34;http://www.people.carleton.edu/~lchihara/&#34; target=&#34;_blank&#34;&gt;Laura Chihara&lt;/a&gt; and I developed a series of tutorials and case studies that can be used in a variety of courses to introduce data-scientific concepts. You can find these materials on &lt;a href=&#34;https://github.com/ds4stats&#34; target=&#34;_blank&#34;&gt;Github&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;This work was funded by grants from the Associated Colleges of the Midwest and the Teagle Foundation.&lt;/p&gt;
 </description>
     </item>
     
@@ -26,8 +28,7 @@
       <pubDate>Sat, 21 Oct 2017 00:00:00 +0000</pubDate>
       
       <guid>/project/lmeresampler/</guid>
-      <description>&lt;p&gt;Longer description down here&amp;hellip;&lt;/p&gt;
-</description>
+      <description></description>
     </item>
     
     <item>
@@ -36,8 +37,7 @@
       <pubDate>Wed, 11 May 2016 00:00:00 +0000</pubDate>
       
       <guid>/project/qqplotr/</guid>
-      <description>&lt;p&gt;Longer description here&amp;hellip;&lt;/p&gt;
-</description>
+      <description></description>
     </item>
     
   </channel>

@@ -6,9 +6,18 @@
     <description>Recent content in Adam Loy on Adam Loy</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>&amp;copy; 2017 Adam Loy</copyright>
+    <copyright>&amp;copy; 2018 Adam Loy</copyright>
     <lastBuildDate>Wed, 20 Apr 2016 00:00:00 +0000</lastBuildDate>
     <atom:link href="/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Statistics in the data science curriculum</title>
+      <link>/talk/2018-lads/</link>
+      <pubDate>Fri, 12 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/talk/2018-lads/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Data Science for Statistics</title>
@@ -16,7 +25,9 @@
       <pubDate>Sat, 21 Oct 2017 00:00:00 +0000</pubDate>
       
       <guid>/project/ds4stats/</guid>
-      <description>&lt;p&gt;Write an extended description down here&amp;hellip;&lt;/p&gt;
+      <description>&lt;p&gt;&lt;a href=&#34;https://www.grinnell.edu/users/kuipers&#34; target=&#34;_blank&#34;&gt;Shonda Kuiper&lt;/a&gt;, &lt;a href=&#34;http://www.people.carleton.edu/~lchihara/&#34; target=&#34;_blank&#34;&gt;Laura Chihara&lt;/a&gt; and I developed a series of tutorials and case studies that can be used in a variety of courses to introduce data-scientific concepts. You can find these materials on &lt;a href=&#34;https://github.com/ds4stats&#34; target=&#34;_blank&#34;&gt;Github&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;This work was funded by grants from the Associated Colleges of the Midwest and the Teagle Foundation.&lt;/p&gt;
 </description>
     </item>
     
@@ -39,8 +50,7 @@
       <pubDate>Sat, 21 Oct 2017 00:00:00 +0000</pubDate>
       
       <guid>/project/lmeresampler/</guid>
-      <description>&lt;p&gt;Longer description down here&amp;hellip;&lt;/p&gt;
-</description>
+      <description></description>
     </item>
     
     <item>
@@ -77,7 +87,7 @@
       <pubDate>Sat, 29 Apr 2017 00:00:00 +0000</pubDate>
       
       <guid>/talk/2017-teagle/</guid>
-      <description>&lt;script async class=&#34;speakerdeck-embed&#34; data-id=&#34;208a4ab09cea4f80b0e38be71f0fa304&#34; data-ratio=&#34;1.33333333333333&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
+      <description>&lt;script async class=&#34;speakerdeck-embed&#34; data-id=&#34;2b583afbcd984fe9a0e281a63af63c63&#34; data-ratio=&#34;1.33333333333333&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
 </description>
     </item>
     
@@ -96,8 +106,7 @@
       <pubDate>Wed, 11 May 2016 00:00:00 +0000</pubDate>
       
       <guid>/project/qqplotr/</guid>
-      <description>&lt;p&gt;Longer description here&amp;hellip;&lt;/p&gt;
-</description>
+      <description></description>
     </item>
     
     <item>
@@ -142,15 +151,6 @@
       <pubDate>Sat, 16 Feb 2013 00:00:00 +0000</pubDate>
       
       <guid>/publication/2013-cc-cscap/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Diagnostic Tools for Hierarchical Linear Models</title>
-      <link>/publication/2013-wires-lit-review/</link>
-      <pubDate>Tue, 01 Jan 2013 00:00:00 +0000</pubDate>
-      
-      <guid>/publication/2013-wires-lit-review/</guid>
       <description></description>
     </item>
     
