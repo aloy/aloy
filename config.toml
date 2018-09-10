@@ -20,7 +20,7 @@ defaultContentLanguageInSubdir = false
 
 [params]
   name = "Adam Loy"
-  role = "Assistant Professor"
+  role = "Assistant Professor, Statistician, R Programmer, Data Scientist"
   organization = "Carleton College"
   organization_url = "https://www.carleton.edu/"
   avatar = "adamloy.jpg"
