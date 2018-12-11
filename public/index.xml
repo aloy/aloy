@@ -11,6 +11,26 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>A discussion of visual inference</title>
+      <link>/talk/2018-lanl/</link>
+      <pubDate>Wed, 05 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/talk/2018-lanl/</guid>
+      <description>&lt;script async class=&#34;speakerdeck-embed&#34; data-id=&#34;c2519d9e6c5a4970b39bdec9a5a1b176&#34; data-ratio=&#34;1.33333333333333&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Q-Q plots: To de-trend, or not to de-trend</title>
+      <link>/talk/2018-macalester/</link>
+      <pubDate>Thu, 01 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/talk/2018-macalester/</guid>
+      <description>&lt;script async class=&#34;speakerdeck-embed&#34; data-id=&#34;11bdb6d8785747c19531edc45af8c7b4&#34; data-ratio=&#34;1.33333333333333&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Statistics in the data science curriculum</title>
       <link>/talk/2018-lads/</link>
       <pubDate>Fri, 12 Jan 2018 00:00:00 +0000</pubDate>
@@ -133,24 +153,6 @@
       <pubDate>Thu, 13 Mar 2014 00:00:00 +0000</pubDate>
       
       <guid>/publication/2014-jswc-6americas/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>HLMdiag: A Suite of Diagnostics for Hierarchical Linear Models in R</title>
-      <link>/publication/2014-jss-hlmdiag/</link>
-      <pubDate>Sat, 25 Jan 2014 00:00:00 +0000</pubDate>
-      
-      <guid>/publication/2014-jss-hlmdiag/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Climate change beliefs, risk perceptions, and attitudes toward adaptation and mitigation among farmers in the midwestern United States</title>
-      <link>/publication/2013-cc-cscap/</link>
-      <pubDate>Sat, 16 Feb 2013 00:00:00 +0000</pubDate>
-      
-      <guid>/publication/2013-cc-cscap/</guid>
       <description></description>
     </item>
     
