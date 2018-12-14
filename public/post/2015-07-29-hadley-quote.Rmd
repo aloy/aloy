@@ -1,0 +1,25 @@
+---
+title: A Nice Piece on Hadley Wickham
+author: Adam Loy
+date: '2015-07-29'
+slug: hello-world
+categories:
+  - R
+tags:
+  - R
+summary: The analyses that get me excited are not Google crunching a terabyte of web ad data in order to optimize revenue... [but rather] the biologists who are absolutely passionate about this one swampfly and now they can use R and they can understand it.
+output:
+  blogdown::html_page:
+    toc: true
+    number_sections: true
+    toc_depth: 1
+---
+
+```{r include = FALSE}
+knitr::opts_chunk$set(eval = FALSE, collapse = TRUE, comment = NA, tidy = FALSE)
+```
+
+
+There is a nice piece over at [Priceonomics](http://priceonomics.com/hadley-wickham-the-man-who-revolutionized-r/) on Hadley Wickham's contribution to R. I especially like the following quote from Hadley:
+
+> The analyses that get me excited are not Google crunching a terabyte of web ad data in order to optimize revenue... [but rather] the biologists who are absolutely passionate about this one swampfly and now they can use R and they can understand it.

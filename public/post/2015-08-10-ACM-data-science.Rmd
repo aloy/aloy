@@ -1,0 +1,33 @@
+---
+title: Recapping the ACM Harnessing Big Data Workshop
+author: Adam Loy
+date: '2015-07-29'
+slug: hello-world
+categories:
+  - R
+tags:
+  - R
+summary: In June I attended an ACM workshop focused on how the ACM can facilitate sharing elements of a data science curriculum across institutions. This is my recap.
+output:
+  blogdown::html_page:
+    toc: true
+    number_sections: true
+    toc_depth: 1
+---
+
+```{r include = FALSE}
+knitr::opts_chunk$set(eval = FALSE, collapse = TRUE, comment = NA, tidy = FALSE)
+```
+The [Associated Colleges of Midwest](http://www.acm.edu/index.html) funded a workshop where faculty from member institutions could brainstorm how resources might be pooled across the ACM schools (of which Beloit, Coe, Grinnell, Lawrence, Luther, Macalester, and Ripon were represented) to provide opportunities in our curriculum related to data science. I really enjoyed this workshop and heard some great ideas about how to keep my statistics curriculum relevant in my students' minds, as well as some possible opportunities for ACM schools to pool strengths, rather than attempting to replicate data science curricula on each campus.
+
+Below are some highlights from the workshop:
+
+* [Danny Kaplan](http://www.macalester.edu/~kaplan/) discussed the newly developed data science minor at [Macalester](http://www.macalester.edu/) as well as a one credit course on [Data and Computing Fundamentals](http://dtkaplan.github.io/DCF-Course-2014/). After the meeting I read Danny's book, [*Data Computing*](http://data-computing.org/), and I highly recommend it. Even though I probably won't be able to offer a similar course, I could certainly incorporate a discussion of tidy data into my classes and extend the discussion of exploratory graphics in my intro classes. Also, through a prior NSF Grant, Danny and others have developed a way of [introducing R command patterns](http://www.calvin.edu/~rpruim/R/MinimalR.pdf) that I am convinced will help my students.
+
+* [Shonda Kuiper](http://web.grinnell.edu/individuals/kuipers/) discussed her [textbook](http://web.grinnell.edu/individuals/kuipers/stat2labs/Textbook.html), freely available online [activities](http://web.grinnell.edu/individuals/kuipers/stat2labs/Labs.html), and [Shiny apps for visualization](http://web.grinnell.edu/individuals/kuipers/stat2labs/visualization.html) that can be incorporated into traditional statistics courses to prepare the next generation to "think with data." I really like how the activities (which seem like games) allow students to work with real-world, unstructured datasets. I predict that many good conversations on data collection and manipulation will stem from the use of these games in my intro stats course. Also, I really like the idea of using Shiny apps provide a great opportunity to make statistics relevant by visualizing large datasets with dynamic graphics.
+* [Gavin Cross](http://www.public.coe.edu/~gcross/) discussed existing data science programs, including a couple from liberal arts schools. He also led a discussion on multiple grant opportunities that could be used to further develop data science curricula at our institutions. This was great information to have, and seeing what schools are doing helped frame our discussion.
+* Meeting statisticians, mathematicians, and computer scientists from similar schools was wonderful. It was great discussing ideas with everyone and devising some promising future directions including:
+    + Developing a repository to share data sets and stories for classroom use, especially those in data science.
+    + Developing an experimental *braided* course during spring 2016 (for those with the flexibility in their curriculum) allowing us to share strength across campuses. The courses would utilize material from Danny and Shonda's textbooks and focus on visualization, working with databases, and honing statistical methods from the first or second course — essentially, it will be a first experiment into teaching data science for many. We discussed how we might be able to use some shared materials and even how we might utilize web conferencing to capitalize on each other's specialties.
+
+Of course there is much more that I could write about this workshop, but I don't want this post to get too long... To recap, I was very fortunate to be invited to the workshop and it helped me organize my thoughts, and think of solutions, for some of the challenges I see with making undergraduate statistics relevant to our students.
