@@ -140,13 +140,13 @@ class: clear, middle
 &lt;tbody&gt;
   &lt;tr&gt;
    &lt;td style="text-align:left;"&gt;  &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 1.22 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 5.951 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 7.059 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 8.203 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 13.154 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 7.064 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 1.61 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1.587 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 5.97 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 7.04 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 8.106 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 12.365 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 7.033 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1.603 &lt;/td&gt;
    &lt;td style="text-align:right;"&gt; 5000 &lt;/td&gt;
    &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
   &lt;/tr&gt;
@@ -187,7 +187,7 @@ quantile(boot_dsn %&gt;% pull(), probs = c(0.05, 0.95))
 
 ```
 ##       5%      95% 
-## 4.461535 9.693952
+## 4.379831 9.685363
 ```
 ]
 
@@ -206,7 +206,7 @@ quantile(boot_dsn %&gt;% pull(), probs = c(0.025, 0.975))
 
 ```
 ##      2.5%     97.5% 
-##  3.958564 10.207082
+##  3.850086 10.198080
 ```
 ]
 
@@ -224,7 +224,7 @@ quantile(boot_dsn %&gt;% pull(), probs = c(0.005, 0.995))
 
 ```
 ##      0.5%     99.5% 
-##  2.942081 11.083335
+##  2.794981 11.040069
 ```
 ]
 
@@ -283,7 +283,7 @@ boot_dsn %&gt;%
 Calculating a percentile CI
 
 ```r
-boot_dsn %&gt;% pull() %&gt;% quantile(probs = c(0.05, 0.95))
+get_ci(boot_dsn, level = 0.95)
 ```
 ]
     </textarea>
