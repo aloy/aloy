@@ -8,7 +8,9 @@
     <language>en-us</language>
     <copyright>&amp;copy; 2018 Adam Loy</copyright>
     <lastBuildDate>Tue, 21 Jul 2015 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/categories/stat-ed/" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="/categories/stat-ed/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Sampling Variability and the G.O.P. Debate</title>
@@ -16,9 +18,8 @@
       <pubDate>Tue, 21 Jul 2015 00:00:00 +0000</pubDate>
       
       <guid>/post/hello-world/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://www.nytimes.com/interactive/2015/07/21/upshot/election-2015-the-first-gop-debate-and-the-role-of-chance.html?abt=0002&amp;amp;abg=1&#34;&gt;&lt;em&gt;The Upshot&lt;/em&gt;&lt;/a&gt; featured a nice article on the role of sampling variability in the selection of the 10 candidates invited to the first GOP debate. The post includes a nice visualization of simulated possible participants, assuming that basic polling data are “true”.&lt;/p&gt;
-&lt;p&gt;Students in an introductory statistics course, especially one using a simulation-based curriculum, would benefit from reading this story. The article is a great spring board for talking about simulation and sampling variability, and also illustrates that these topics are relevant!&lt;/p&gt;
-</description>
+      <description>The Upshot featured a nice article on the role of sampling variability in the selection of the 10 candidates invited to the first GOP debate. The post includes a nice visualization of simulated possible participants, assuming that basic polling data are “true”.
+Students in an introductory statistics course, especially one using a simulation-based curriculum, would benefit from reading this story. The article is a great spring board for talking about simulation and sampling variability, and also illustrates that these topics are relevant!</description>
     </item>
     
   </channel>

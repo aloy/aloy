@@ -126,25 +126,15 @@
     </item>
     
     <item>
-      <title>A Nice Piece on Hadley Wickham</title>
-      <link>/post/hello-world/</link>
-      <pubDate>Wed, 29 Jul 2015 00:00:00 +0000</pubDate>
-      
-      <guid>/post/hello-world/</guid>
-      <description>&lt;p&gt;There is a nice piece over at &lt;a href=&#34;http://priceonomics.com/hadley-wickham-the-man-who-revolutionized-r/&#34;&gt;Priceonomics&lt;/a&gt; on Hadley Wickham’s contribution to R. I especially like the following quote from Hadley:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;The analyses that get me excited are not Google crunching a terabyte of web ad data in order to optimize revenue… [but rather] the biologists who are absolutely passionate about this one swampfly and now they can use R and they can understand it.&lt;/p&gt;
-&lt;/blockquote&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Recapping the ACM Harnessing Big Data Workshop</title>
       <link>/post/hello-world/</link>
-      <pubDate>Wed, 29 Jul 2015 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 10 Aug 2015 00:00:00 +0000</pubDate>
       
       <guid>/post/hello-world/</guid>
-      <description>&lt;p&gt;The &lt;a href=&#34;http://www.acm.edu/index.html&#34;&gt;Associated Colleges of Midwest&lt;/a&gt; funded a workshop where faculty from member institutions could brainstorm how resources might be pooled across the ACM schools (of which Beloit, Coe, Grinnell, Lawrence, Luther, Macalester, and Ripon were represented) to provide opportunities in our curriculum related to data science. I really enjoyed this workshop and heard some great ideas about how to keep my statistics curriculum relevant in my students’ minds, as well as some possible opportunities for ACM schools to pool strengths, rather than attempting to replicate data science curricula on each campus.&lt;/p&gt;
+      <description>
+
+
+&lt;p&gt;The &lt;a href=&#34;http://www.acm.edu/index.html&#34;&gt;Associated Colleges of Midwest&lt;/a&gt; funded a workshop where faculty from member institutions could brainstorm how resources might be pooled across the ACM schools (of which Beloit, Coe, Grinnell, Lawrence, Luther, Macalester, and Ripon were represented) to provide opportunities in our curriculum related to data science. I really enjoyed this workshop and heard some great ideas about how to keep my statistics curriculum relevant in my students’ minds, as well as some possible opportunities for ACM schools to pool strengths, rather than attempting to replicate data science curricula on each campus.&lt;/p&gt;
 &lt;p&gt;Below are some highlights from the workshop:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://www.macalester.edu/~kaplan/&#34;&gt;Danny Kaplan&lt;/a&gt; discussed the newly developed data science minor at &lt;a href=&#34;http://www.macalester.edu/&#34;&gt;Macalester&lt;/a&gt; as well as a one credit course on &lt;a href=&#34;http://dtkaplan.github.io/DCF-Course-2014/&#34;&gt;Data and Computing Fundamentals&lt;/a&gt;. After the meeting I read Danny’s book, &lt;a href=&#34;http://data-computing.org/&#34;&gt;&lt;em&gt;Data Computing&lt;/em&gt;&lt;/a&gt;, and I highly recommend it. Even though I probably won’t be able to offer a similar course, I could certainly incorporate a discussion of tidy data into my classes and extend the discussion of exploratory graphics in my intro classes. Also, through a prior NSF Grant, Danny and others have developed a way of &lt;a href=&#34;http://www.calvin.edu/~rpruim/R/MinimalR.pdf&#34;&gt;introducing R command patterns&lt;/a&gt; that I am convinced will help my students.&lt;/p&gt;&lt;/li&gt;
@@ -161,12 +151,31 @@
     </item>
     
     <item>
+      <title>A Nice Piece on Hadley Wickham</title>
+      <link>/post/hello-world/</link>
+      <pubDate>Wed, 29 Jul 2015 00:00:00 +0000</pubDate>
+      
+      <guid>/post/hello-world/</guid>
+      <description>
+
+
+&lt;p&gt;There is a nice piece over at &lt;a href=&#34;http://priceonomics.com/hadley-wickham-the-man-who-revolutionized-r/&#34;&gt;Priceonomics&lt;/a&gt; on Hadley Wickham’s contribution to R. I especially like the following quote from Hadley:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The analyses that get me excited are not Google crunching a terabyte of web ad data in order to optimize revenue… [but rather] the biologists who are absolutely passionate about this one swampfly and now they can use R and they can understand it.&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Sampling Variability and the G.O.P. Debate</title>
       <link>/post/hello-world/</link>
       <pubDate>Tue, 21 Jul 2015 00:00:00 +0000</pubDate>
       
       <guid>/post/hello-world/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://www.nytimes.com/interactive/2015/07/21/upshot/election-2015-the-first-gop-debate-and-the-role-of-chance.html?abt=0002&amp;amp;abg=1&#34;&gt;&lt;em&gt;The Upshot&lt;/em&gt;&lt;/a&gt; featured a nice article on the role of sampling variability in the selection of the 10 candidates invited to the first GOP debate. The post includes a nice visualization of simulated possible participants, assuming that basic polling data are “true”.&lt;/p&gt;
+      <description>
+
+
+&lt;p&gt;&lt;a href=&#34;http://www.nytimes.com/interactive/2015/07/21/upshot/election-2015-the-first-gop-debate-and-the-role-of-chance.html?abt=0002&amp;amp;abg=1&#34;&gt;&lt;em&gt;The Upshot&lt;/em&gt;&lt;/a&gt; featured a nice article on the role of sampling variability in the selection of the 10 candidates invited to the first GOP debate. The post includes a nice visualization of simulated possible participants, assuming that basic polling data are “true”.&lt;/p&gt;
 &lt;p&gt;Students in an introductory statistics course, especially one using a simulation-based curriculum, would benefit from reading this story. The article is a great spring board for talking about simulation and sampling variability, and also illustrates that these topics are relevant!&lt;/p&gt;
 </description>
     </item>

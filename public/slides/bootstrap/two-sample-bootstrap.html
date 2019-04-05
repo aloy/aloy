@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>The two-sample bootstrap</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Math 215: Introduction to Statistics" />
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/remark-css/metropolis.css" rel="stylesheet" />
+    <link href="libs/remark-css/metropolis-fonts.css" rel="stylesheet" />
+    <link rel="stylesheet" href="my-font.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# The two-sample bootstrap
+## Day 17
+<html>
+<div style="float:left">
+
+</div>
+<hr color='#EB811B' size=1px width=796px>
+</html>
+### Math 215: Introduction to Statistics
+### Winter 2019
+
+---
+
+
+
+
+
+# Example: PISA
+
+.font120[
+- The Program for International Student Assessment  (PISA) is an international exam that is administered to 15-year-old students in many different countries every three years.
+
+- 515,958 students from around the world took the 2009 PISA. 
+
+- A random sample from those students was taken from the United States and Finland, each with a sample size of 100. 
+
+- **How large are the differences in student performance on the PISA exam for the United States and Finland?**
+]
+
+---
+
+# EDA
+
+&lt;img src="two-sample-bootstrap_files/figure-html/unnamed-chunk-1-1.svg" style="display: block; margin: auto;" /&gt;
+
+.font120[
+&lt;table&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; Country &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; min &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Q1 &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; median &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Q3 &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; max &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; mean &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; sd &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; n &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; missing &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Finland &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 8 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 30.75 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 40.0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 44.00 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 55 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 37.14 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 10.53999 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 100 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; USA &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 8 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 20.00 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 29.5 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 40.25 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 57 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 30.10 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 11.96502 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 100 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+]
+
+---
+
+# Two-sample bootstrap
+
+.font120[
+1. Draw a random sample of *n&lt;sub&gt;1&lt;/sub&gt;* observations, with replacement, from the original sample for the first group.
+
+2. Draw a random sample of *n&lt;sub&gt;2&lt;/sub&gt;* observations, with replacement, from the original sample for the second group.
+
+3. Calculate the statistic of interest from these bootstrap samples (e.g., the difference in means). This statistic is called a bootstrap statistic.
+
+4. Repeat steps 1-3 many times, say 5,000.
+
+5. Combine all of the bootstrap statistics to form the bootstrap distribution. 
+]
+
+---
+
+# Two-sample bootstrap
+
+.center[![](bootstrap3.gif)]
+
+.footnote[https://www.stat.auckland.ac.nz/~wild/BootAnim/movies/bootstrap3-1.mp4]
+---
+class: clear, middle
+
+&lt;img src="two-sample-bootstrap_files/figure-html/unnamed-chunk-3-1.svg" width="700" style="display: block; margin: auto;" /&gt;
+
+.font120[
+&lt;table&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt;   &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; min &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Q1 &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; median &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Q3 &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; max &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; mean &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; sd &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; n &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; missing &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1.587 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 5.97 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 7.04 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 8.106 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 12.365 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 7.033 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1.603 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 5000 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+]
+
+---
+
+class: middle, inverse, center
+
+# How do we build intervals at other confidence levels?
+
+---
+
+# Percentile method for bootstrap CIs
+
+.font120[
+To form `\(P \times 100\)`% bootstrap confidence intervals use the following endpoints:
+
+&lt;br&gt;
+
+Lower endpoint: `\((1 - P)/2\)` percentile
+
+&lt;br&gt;
+
+Upper endpoint: `\(1 - (1 - P)/2\)` percentile
+]
+
+---
+class: clear
+
+.code100[
+
+```r
+quantile(boot_dsn %&gt;% pull(), probs = c(0.05, 0.95))
+```
+
+```
+##       5%      95% 
+## 4.379831 9.685363
+```
+]
+
+&lt;img src="two-sample-bootstrap_files/figure-html/unnamed-chunk-6-1.svg" width="700" style="display: block; margin: auto;" /&gt;
+
+
+
+---
+class: clear
+
+.code100[
+
+```r
+quantile(boot_dsn %&gt;% pull(), probs = c(0.025, 0.975))
+```
+
+```
+##      2.5%     97.5% 
+##  3.850086 10.198080
+```
+]
+
+&lt;img src="two-sample-bootstrap_files/figure-html/unnamed-chunk-8-1.svg" width="700" style="display: block; margin: auto;" /&gt;
+
+
+---
+class: clear
+
+.code100[
+
+```r
+quantile(boot_dsn %&gt;% pull(), probs = c(0.005, 0.995))
+```
+
+```
+##      0.5%     99.5% 
+##  2.794981 11.040069
+```
+]
+
+&lt;img src="two-sample-bootstrap_files/figure-html/unnamed-chunk-10-1.svg" width="700" style="display: block; margin: auto;" /&gt;
+
+---
+
+# Your turn
+
+.font120[
+Specify the percentiles that should be used to create confidence intervals at each confidence level
+
+- 89% confidence level
+
+- 96% confidence level
+]
+
+---
+
+# Cautions
+
+.font120[
+- Percentile intervals should not be used for small samples 
+
+&lt;br&gt;
+
+- Bootstrap distribution should appear to be smooth 
+
+&lt;br&gt;
+
+- Applies to the bootstrap in general
+]
+
+---
+class: clear
+
+.font120[
+Constructing the bootstrap distribution
+
+```r
+boot_dsn &lt;- pisa2 %&gt;%
+* specify(Score ~ Country) %&gt;%
+  generate(reps = 1000, type = "bootstrap") %&gt;%
+* calculate(stat = "diff in means", order = c("Finland", "USA"))
+```
+
+Creating the histogram
+
+```r
+boot_dsn %&gt;%
+  visualize(bins = 40) +
+  theme_light() +
+  labs(x = "Difference in mean scores (Finland - USA)")
+```
+
+Calculating a percentile CI
+
+```r
+get_ci(boot_dsn, level = 0.95)
+```
+]
+    </textarea>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightLines": true,
+"countIncrementalSlides": false,
+"ratio": "4:3"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function() {
+  var d = document, s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})();</script>
+
+<script>
+(function() {
+  var i, text, code, codes = document.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+})();
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_HTMLorMML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

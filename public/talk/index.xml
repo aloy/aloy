@@ -8,7 +8,9 @@
     <language>en-us</language>
     <copyright>&amp;copy; 2018 Adam Loy</copyright>
     <lastBuildDate>Sun, 01 Jan 2017 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/talk/" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="/talk/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>A discussion of visual inference</title>
@@ -16,8 +18,7 @@
       <pubDate>Wed, 05 Dec 2018 00:00:00 +0000</pubDate>
       
       <guid>/talk/2018-lanl/</guid>
-      <description>&lt;script async class=&#34;speakerdeck-embed&#34; data-id=&#34;c2519d9e6c5a4970b39bdec9a5a1b176&#34; data-ratio=&#34;1.33333333333333&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
-</description>
+      <description> </description>
     </item>
     
     <item>
@@ -26,8 +27,7 @@
       <pubDate>Thu, 01 Nov 2018 00:00:00 +0000</pubDate>
       
       <guid>/talk/2018-macalester/</guid>
-      <description>&lt;script async class=&#34;speakerdeck-embed&#34; data-id=&#34;11bdb6d8785747c19531edc45af8c7b4&#34; data-ratio=&#34;1.33333333333333&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
-</description>
+      <description> </description>
     </item>
     
     <item>
@@ -54,8 +54,7 @@
       <pubDate>Mon, 15 May 2017 00:00:00 +0000</pubDate>
       
       <guid>/talk/2017-uscots/</guid>
-      <description>&lt;script async class=&#34;speakerdeck-embed&#34; data-id=&#34;d16c0455542946b68d5a068492b12a3e&#34; data-ratio=&#34;1.33333333333333&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
-</description>
+      <description> </description>
     </item>
     
     <item>
@@ -64,8 +63,7 @@
       <pubDate>Sat, 29 Apr 2017 00:00:00 +0000</pubDate>
       
       <guid>/talk/2017-teagle/</guid>
-      <description>&lt;script async class=&#34;speakerdeck-embed&#34; data-id=&#34;2b583afbcd984fe9a0e281a63af63c63&#34; data-ratio=&#34;1.33333333333333&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
-</description>
+      <description> </description>
     </item>
     
   </channel>
