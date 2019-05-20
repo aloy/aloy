@@ -38,14 +38,15 @@ emplogit <- function(x, y, binsize = NULL, ci = FALSE, probit = FALSE,
   prob = xmean = ns = rep(0, length(a)) # ns is for CIs
   for (i in 1:length(a)){
     range = (a[i]):(b[i])
-    prob[i] = (sum(y[range]) + 0.5) / (length(y[range]) + 0.5)
+    prob[i] = (sum(y[range]) + 0.5) / (length(y[range]) + 1)
     xmean[i] = mean(x[range])
     ns[i] = b[i] - a[i] + 1 # for CI 
   }
-  
+
   extreme = (prob == 1 | prob == 0)
-  prob[prob == 0] = min(prob[!extreme])
-  prob[prob == 1] = max(prob[!extreme])
+  # prob[prob == 0] = min(prob[!extreme])
+  # prob[prob == 1] = max(prob[!extreme])
+
   
   g = link(prob) # logits (or probits if probit == TRUE)
   
