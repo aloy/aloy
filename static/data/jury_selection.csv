@@ -1,4 +1,4 @@
-juror_id,trial__id,struck_by,race,defendant_race,accused,fam_accused,know_def,fam_law_enforcement,death_hesitation,strike_eligibility,same_race,struck_state,is_black
+juror_id,trial_id,struck_by,race,defendant_race,accused,fam_accused,know_def,fam_law_enforcement,death_hesitation,strike_eligibility,same_race,struck_state,is_black
 107,3,Struck by the defense,White,Black,FALSE,FALSE,FALSE,FALSE,FALSE,Both State and Defense,FALSE,0,FALSE
 108,3,Struck by the state,Black,Black,FALSE,TRUE,FALSE,FALSE,FALSE,State,TRUE,1,TRUE
 109,3,Juror chosen to serve on jury,Black,Black,FALSE,FALSE,FALSE,FALSE,FALSE,Both State and Defense,TRUE,0,TRUE
