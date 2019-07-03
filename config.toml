@@ -4,6 +4,7 @@ copyright = "&copy; 2018 Adam Loy"
 theme = "hugo-academic"
 enableEmoji = true
 footnotereturnlinkcontents = "<sup>^</sup>"
+ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 
 # Enable comments by entering your Disqus shortname
 disqusShortname = ""
@@ -20,7 +21,7 @@ defaultContentLanguageInSubdir = false
 
 [params]
   name = "Adam Loy"
-  role = "Assistant Professor, Statistician, R Programmer, Data Scientist"
+  role = "Assistant Professor, Statistician, Data Scientist, R Programmer"
   organization = "Carleton College"
   organization_url = "https://www.carleton.edu/"
   avatar = "adamloy.jpg"
@@ -147,7 +148,7 @@ defaultContentLanguageInSubdir = false
   [[params.social]]
     icon = "arxiv"
     icon_pack = "ai"
-    link = "https://arxiv.org/find/stat/1/au:+Loy_A/0/1/0/all/0/1"
+    link = "https://arxiv.org/a/loy_a_1"
     
   [[params.social]]
     icon = "linkedin"
@@ -166,7 +167,7 @@ defaultContentLanguageInSubdir = false
 
 [[menu.main]]
   name = "CV"
-  url = "/pdf/cv_june2018.pdf"
+  url = "https://drive.google.com/file/d/1JGHU_utoG8hXemuxZVcjZxGK0RwA_jq1/view?usp=sharing"
   weight = 2
 
   

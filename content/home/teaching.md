@@ -14,14 +14,15 @@ weight = 10
 
 +++
 
-During winter 2018 I am teaching the following courses at Carleton:
+2019-2020 academic year:
+
+- Math 315: Bayesian statistics (Fall)
+- Math 280: Statistical consulting (Fall, Winter, Spring)
+- Math 285: Introduction to data science (Spring)
+
+Past courses:
 
 - Math 215: Introduction to statistics
-- Math 285: Introduction to data science
-
-Past courses that I have taught at Carleton:
-
 - Math 245: Applied regression
 - Math 265: Probability
 - Math 275: Introduction to statistical inference
-- Math 315: Bayesian statistics

@@ -2,94 +2,112 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>2 on Adam Loy</title>
-    <link>/publication_types/2/</link>
+    <link>https://aloy.rbind.io/publication_types/2/</link>
     <description>Recent content in 2 on Adam Loy</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018 Adam Loy</copyright>
-    <lastBuildDate>Fri, 19 May 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 02 Apr 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/publication_types/2/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://aloy.rbind.io/publication_types/2/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Supporting Data Science in the Statistics Curriculum</title>
+      <link>https://aloy.rbind.io/publication/2019-jse/</link>
+      <pubDate>Tue, 02 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://aloy.rbind.io/publication/2019-jse/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>A tale of four cities: exploring the soul of State College, Detroit, Milledgeville and Biloxi</title>
+      <link>https://aloy.rbind.io/publication/2019-cost/</link>
+      <pubDate>Thu, 10 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://aloy.rbind.io/publication/2019-cost/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Model Choice and Diagnostics for Linear Mixed-Effects Models Using Statistics on Street Corners</title>
-      <link>/publication/2017-jcgs/</link>
+      <link>https://aloy.rbind.io/publication/2017-jcgs/</link>
       <pubDate>Fri, 19 May 2017 00:00:00 +0000</pubDate>
       
-      <guid>/publication/2017-jcgs/</guid>
+      <guid>https://aloy.rbind.io/publication/2017-jcgs/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Variations of Q-Q Plots: The Power of Our Eyes!</title>
-      <link>/publication/2016-tas-qq-plots/</link>
+      <link>https://aloy.rbind.io/publication/2016-tas-qq-plots/</link>
       <pubDate>Thu, 09 Jun 2016 00:00:00 +0000</pubDate>
       
-      <guid>/publication/2016-tas-qq-plots/</guid>
+      <guid>https://aloy.rbind.io/publication/2016-tas-qq-plots/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Are You Normal? The Problem of Confounded Residual Structures in Hierarchical Linear Models</title>
-      <link>/publication/2015-jcgs-normality/</link>
+      <link>https://aloy.rbind.io/publication/2015-jcgs-normality/</link>
       <pubDate>Thu, 10 Dec 2015 00:00:00 +0000</pubDate>
       
-      <guid>/publication/2015-jcgs-normality/</guid>
+      <guid>https://aloy.rbind.io/publication/2015-jcgs-normality/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Upper Midwest Climate Variations: Farmer Responses to Excess Water Risks</title>
-      <link>/publication/2015-jeq/</link>
+      <link>https://aloy.rbind.io/publication/2015-jeq/</link>
       <pubDate>Fri, 13 Mar 2015 00:00:00 +0000</pubDate>
       
-      <guid>/publication/2015-jeq/</guid>
+      <guid>https://aloy.rbind.io/publication/2015-jeq/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Understanding Corn Belt farmer perspectives on climate change to inform engagement strategies for adaptation and mitigation</title>
-      <link>/publication/2014-jswc-6americas/</link>
+      <link>https://aloy.rbind.io/publication/2014-jswc-6americas/</link>
       <pubDate>Thu, 13 Mar 2014 00:00:00 +0000</pubDate>
       
-      <guid>/publication/2014-jswc-6americas/</guid>
+      <guid>https://aloy.rbind.io/publication/2014-jswc-6americas/</guid>
       <description></description>
     </item>
     
     <item>
       <title>HLMdiag: A Suite of Diagnostics for Hierarchical Linear Models in R</title>
-      <link>/publication/2014-jss-hlmdiag/</link>
+      <link>https://aloy.rbind.io/publication/2014-jss-hlmdiag/</link>
       <pubDate>Sat, 25 Jan 2014 00:00:00 +0000</pubDate>
       
-      <guid>/publication/2014-jss-hlmdiag/</guid>
+      <guid>https://aloy.rbind.io/publication/2014-jss-hlmdiag/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Climate change beliefs, risk perceptions, and attitudes toward adaptation and mitigation among farmers in the midwestern United States</title>
-      <link>/publication/2013-cc-cscap/</link>
+      <link>https://aloy.rbind.io/publication/2013-cc-cscap/</link>
       <pubDate>Sat, 16 Feb 2013 00:00:00 +0000</pubDate>
       
-      <guid>/publication/2013-cc-cscap/</guid>
+      <guid>https://aloy.rbind.io/publication/2013-cc-cscap/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Diagnostic Tools for Hierarchical Linear Models</title>
-      <link>/publication/2013-wires-lit-review/</link>
+      <link>https://aloy.rbind.io/publication/2013-wires-lit-review/</link>
       <pubDate>Tue, 01 Jan 2013 00:00:00 +0000</pubDate>
       
-      <guid>/publication/2013-wires-lit-review/</guid>
+      <guid>https://aloy.rbind.io/publication/2013-wires-lit-review/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Delayed, canceled, on time, boarding... Flying in the USA</title>
-      <link>/publication/2011-jcgs-data-expo/</link>
+      <link>https://aloy.rbind.io/publication/2011-jcgs-data-expo/</link>
       <pubDate>Thu, 01 Dec 2011 00:00:00 +0000</pubDate>
       
-      <guid>/publication/2011-jcgs-data-expo/</guid>
+      <guid>https://aloy.rbind.io/publication/2011-jcgs-data-expo/</guid>
       <description></description>
     </item>
     
