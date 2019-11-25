@@ -1,0 +1,1550 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+  <head>
+    <title>Can’t a computer do that?</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Adam Loy" />
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/remark-css/default-fonts.css" rel="stylesheet" />
+    <link href="libs/remark-css/hygge.css" rel="stylesheet" />
+    <script src="libs/kePrint/kePrint.js"></script>
+    <link href="libs/font-awesome/css/fontawesome-all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="footer.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+
+
+class: inverse, center, middle
+&lt;!-- background-image: url(figs/p_and_p_cover.png) --&gt;
+&lt;!-- background-size: cover --&gt;
+
+# Can't a computer do that?
+
+&lt;!-- &lt;img src="" width="150px"/&gt; --&gt;
+&lt;img src="figures/Red_camera_eye.svg.png" width="25%" /&gt;
+
+
+### Exploring automatic evaluation of statistical graphics
+
+.large[Adam Loy | Gustavus Adolphus MCS Seminar | 30 Sept 2019]
+
+
+---
+class: center, middle
+
+
+# Have you ever fit a regression model?
+
+--
+
+# Did you check residual plots?
+
+--
+
+# Have you ever seen a residual plot you weren't sure how to interpret?
+
+---
+
+# Sample homework problem
+
+
+.pull-left[
+
+`\(\widehat{\tt heart.rate} = b_0 + b_1 \cdot {\tt duration}\)`
+
+![](gustavus_talk_sept2019_files/figure-html/pengiun-scatter-1.svg)&lt;!-- --&gt;
+]
+
+--
+
+.pull-right[
+
+Is there any evidence of structure?
+
+![](gustavus_talk_sept2019_files/figure-html/penguin-residuals-1.svg)&lt;!-- --&gt;
+]
+
+---
+class: middle
+
+# apophenia
+
+### the tendency to perceive a connection or meaningful pattern between unrelated or random things (such as objects or ideas)
+
+
+.footnote[
+"apophenia” Meriam-Webster Dictionary Online, September 2019, merriam-webster.com
+]
+
+---
+
+
+background-image: url(figures/usual_suspects.jpg)
+background-size: cover 
+
+# &lt;font color="DimGray"&gt;The lineup protocol&lt;/font&gt;
+
+---
+
+## Which residual plot is not like the others?
+
+![](gustavus_talk_sept2019_files/figure-html/resid lineup-1.svg)&lt;!-- --&gt;
+
+???
+Observed plot: 1
+
+---
+class: center, middle
+# What did we just do?
+
+--
+
+## We compared the **data plot** with **null plots** of samples where, by construction, there really is nothing going on
+
+--
+
+## This allows us to make decisions from our graphics on a firm foundation
+
+
+---
+
+# Inspiration
+
+.large[
+Classical hypothesis testing provides an established framework for inference.
+
+
+- Formulate two competing hypotheses: `\(H_0\)` and `\(H_1\)`.
+
+- Choose a test statistic that characterizes the information in the sample relevant to `\(H_0\)`.
+
+- Determine the sampling distribution of the chosen statistic when `\(H_0\)` is true.
+
+- Compare the calculated test statistic to the sampling distribution to determine whether it is "extreme."
+]
+
+---
+
+.left-column[
+&lt;br&gt;
+
+Hypotheses
+
+&lt;br&gt;
+
+Test statistic
+
+&lt;br&gt;
+
+&lt;br&gt;
+
+&lt;br&gt;
+
+Reference distribution
+
+&lt;br&gt;
+
+&lt;br&gt;
+
+&lt;br&gt;
+
+Evidence against H&lt;sub&gt;0&lt;/sub&gt; if...
+
+]
+
+.pull-left[
+.bold[Conventional Inference]
+
+H&lt;sub&gt;0&lt;/sub&gt;: linear relationship
+
+]
+
+.bold[Visual Inference]
+
+H&lt;sub&gt;1&lt;/sub&gt;: nonlinear relationship
+
+
+
+---
+
+.left-column[
+&lt;br&gt;
+
+Hypotheses
+
+&lt;br&gt;
+
+Test statistic
+
+&lt;br&gt;
+
+&lt;br&gt;
+
+&lt;br&gt;
+
+Reference distribution
+
+&lt;br&gt;
+
+&lt;br&gt;
+
+&lt;br&gt;
+
+Evidence against H&lt;sub&gt;0&lt;/sub&gt; if...
+
+]
+
+.pull-left[
+.bold[Conventional Inference]
+
+H&lt;sub&gt;0&lt;/sub&gt;: linear relationship
+
+&lt;br&gt;
+
+Nested F-test
+
+M1: `\(E(Y|X) = \beta_0 + \beta_1x\)`
+
+M2: `\(E(Y|X) = \beta_0 + \beta_1x + \beta_2x^2\)`
+
+
+]
+
+.bold[Visual Inference]
+
+H&lt;sub&gt;1&lt;/sub&gt;: nonlinear relationship
+
+--
+
+&lt;img src="gustavus_talk_sept2019_files/figure-html/plot as statistic-1.svg" width="20%" /&gt;
+
+---
+
+.left-column[
+&lt;br&gt;
+
+Hypotheses
+
+&lt;br&gt;
+
+Test statistic
+
+&lt;br&gt;
+
+&lt;br&gt;
+
+&lt;br&gt;
+
+Reference distribution
+
+&lt;br&gt;
+
+&lt;br&gt;
+
+&lt;br&gt;
+
+Evidence against H&lt;sub&gt;0&lt;/sub&gt; if...
+
+]
+
+.pull-left[
+.bold[Conventional Inference]
+
+H&lt;sub&gt;0&lt;/sub&gt;: linear relationship
+
+&lt;br&gt;
+
+Nested F-test
+
+M1: `\(E(Y|X) = \beta_0 + \beta_1x\)`
+
+M2: `\(E(Y|X) = \beta_0 + \beta_1x + \beta_2x^2\)`
+
+&lt;img src="gustavus_talk_sept2019_files/figure-html/unnamed-chunk-2-1.svg" width="45%" /&gt;
+
+
+]
+
+.bold[Visual Inference]
+
+H&lt;sub&gt;1&lt;/sub&gt;: nonlinear relationship
+
+&lt;img src="gustavus_talk_sept2019_files/figure-html/plot as statistic-1.svg" width="20%" /&gt;
+
+--
+
+&lt;img src="gustavus_talk_sept2019_files/figure-html/unnamed-chunk-3-1.svg" width="33%" /&gt;
+
+---
+
+.left-column[
+&lt;br&gt;
+
+Hypotheses
+
+&lt;br&gt;
+
+Test statistic
+
+&lt;br&gt;
+
+&lt;br&gt;
+
+&lt;br&gt;
+
+Reference distribution
+
+&lt;br&gt;
+
+&lt;br&gt;
+
+&lt;br&gt;
+
+Evidence against H&lt;sub&gt;0&lt;/sub&gt; if...
+
+]
+
+.pull-left[
+.bold[Conventional Inference]
+
+H&lt;sub&gt;0&lt;/sub&gt;: linear relationship
+
+&lt;br&gt;
+
+Nested F-test
+
+M1: `\(E(Y|X) = \beta_0 + \beta_1x\)`
+
+M2: `\(E(Y|X) = \beta_0 + \beta_1x + \beta_2x^2\)`
+
+&lt;img src="gustavus_talk_sept2019_files/figure-html/unnamed-chunk-4-1.svg" width="45%" /&gt;
+
+&lt;br&gt;
+
+
+
+the test statistic is "extreme"
+
+]
+
+.bold[Visual Inference]
+
+H&lt;sub&gt;1&lt;/sub&gt;: nonlinear relationship
+
+&lt;img src="gustavus_talk_sept2019_files/figure-html/plot as statistic-1.svg" width="20%" /&gt;
+
+&lt;img src="gustavus_talk_sept2019_files/figure-html/unnamed-chunk-5-1.svg" width="33%" /&gt;
+
+--
+
+the data plot is identifiable
+
+---
+class: clear
+
+### Which Q-Q plot is most different?
+
+![](gustavus_talk_sept2019_files/figure-html/qqplot lineup-1.svg)&lt;!-- --&gt;
+
+???
+
+Observed plot: 9
+
+---
+class: clear
+
+### Is it rude to bring a baby on a plane?
+
+![](gustavus_talk_sept2019_files/figure-html/bar lineup-1.svg)&lt;!-- --&gt;
+
+???
+
+Observed plot: 11
+
+---
+class: middle, center
+
+# That's a neat idea, but where does it fit into my workflow?
+
+---
+
+# Applications of visual inference
+
+.large[
+1. Model diagnostics
+
+2. Interpreting unfamiliar plots
+
+3. When large-sample theory breaks down
+
+4. Conducting research in (statistical) graphics
+]
+
+---
+class: middle, center
+
+# That's great! 
+
+--
+
+# Can you train a computer do this?
+
+---
+
+# How?
+
+.large[
+We have to turn plot evaluation into a classification problem...
+
+.pull-left[
+
+.center[Good residual plot]
+
+&lt;img src="gustavus_talk_sept2019_files/figure-html/unnamed-chunk-6-1.svg" style="display: block; margin: auto;" /&gt;
+
+
+]
+
+
+.pull-right[
+
+.center[Bad residual plot]
+
+&lt;img src="gustavus_talk_sept2019_files/figure-html/bad residuals-1.svg" style="display: block; margin: auto;" /&gt;
+
+]
+]
+
+---
+
+# How can we model this?
+
+.large[
+1. Statistical paradigm
+
+  + Logistic regression
+  
+  + .bold[Random forests]
+  
+  + Support vector machines (SVMs)
+
+2. Computer vision paradigm
+
+  + Neural networks
+]
+
+---
+class: middle, center
+# Statistical modeling
+
+## work with Cari Comnick, Logan Crowl, Sophia Gunn, Aidan Mullan
+
+---
+
+# Major questions
+
+.pull-left[
+
+1. What's the response?
+
+2. **What are the predictors?**
+
+3. How are we going to relate the two?
+
+4. Does that model fit? 
+
+5. How well does this model perform?
+]
+
+&lt;br&gt;
+Good or bad class label
+
+--
+
+Hmm... that's hard
+
+--
+
+We'll use a random forest
+
+--
+
+&lt;br&gt;
+Be sure to check your model
+
+--
+
+Need to gauge predictive accuracy
+
+---
+class: middle, center
+
+# How can we summarize key features/characteristics of scatterplots?
+
+--
+
+# Summary statistics are not the answer!
+
+---
+class: center, middlep
+
+background-image: url(figures/Datasaurus12.png)
+background-size: cover 
+
+
+---
+
+# Scagnostics (scatterplot diagnostics)
+
+.large[
+- Originally proposed by Tukey &amp; Tukey (1985)
+ 
+- Original idea was to provide indices to help guide exploration of a large scatterplot matrix
+ 
+- Wilkinson, Anand, &amp; Grossman (2005) proposed 9 graph-theoretic metrics
+ 
+- Wilkinson &amp; Wills (2008) explored the distribution of scagnostics on different classes of scatterplots
+]
+
+
+
+---
+
+.left-column[
+# Shape
+## Stringy
+]
+
+.right-column[
+
+.pull-left[
+&lt;img src="img/stringyLow.png" width="70%" style="display: block; margin: auto 0 auto auto;" /&gt;
+
+&lt;img src="img/stringyMedium.png" width="70%" style="display: block; margin: auto 0 auto auto;" /&gt;
+
+&lt;img src="img/stringyHigh.png" width="70%" style="display: block; margin: auto 0 auto auto;" /&gt;
+]
+
+.pull-right[
+
+.Large[
+&lt;br&gt;
+
+Low
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+
+
+Medium
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+
+High
+]
+]
+
+
+]
+
+???
+
+Diameter / length of the MST
+
+---
+
+.left-column[
+# Shape
+## Stringy
+## Skinny
+]
+
+.right-column[
+
+.pull-left[
+&lt;img src="img/skinnyLow.png" width="70%" style="display: block; margin: auto 0 auto auto;" /&gt;
+
+&lt;img src="img/skinnyMedium.png" width="70%" style="display: block; margin: auto 0 auto auto;" /&gt;
+
+&lt;img src="img/skinnyHigh.png" width="70%" style="display: block; margin: auto 0 auto auto;" /&gt;
+]
+
+.pull-right[
+.Large[
+&lt;br&gt;
+
+Low
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+
+
+Medium
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+
+High
+]
+]
+]
+
+???
+
+`\(1 - \dfrac{\sqrt{4\pi \cdot area(A)}}{perimeter(A)}\)`
+
+---
+
+.left-column[
+# Shape
+
+## Stringy
+## Skinny
+## Convex
+
+]
+
+.right-column[
+
+.pull-left[
+&lt;img src="img/convexLow.png" width="70%" style="display: block; margin: auto 0 auto auto;" /&gt;
+
+&lt;img src="img/convexMedium.png" width="70%" style="display: block; margin: auto 0 auto auto;" /&gt;
+
+&lt;img src="img/convexHigh.png" width="70%" style="display: block; margin: auto 0 auto auto;" /&gt;
+]
+
+
+.pull-right[
+.Large[
+&lt;br&gt;
+
+Low
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+
+
+Medium
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+
+High
+]
+]
+]
+
+???
+
+area(alpha hull)/area(convex hull)
+
+
+---
+
+.left-column[
+# Association
+## Monotonic
+]
+
+.right-column[
+
+.pull-left[
+&lt;img src="img/monotonicLow.png" width="70%" style="display: block; margin: auto 0 auto auto;" /&gt;
+
+&lt;img src="img/monotonicMedium.png" width="70%" style="display: block; margin: auto 0 auto auto;" /&gt;
+
+&lt;img src="img/monotonicHigh.png" width="70%" style="display: block; margin: auto 0 auto auto;" /&gt;
+]
+
+.pull-right[
+.Large[
+&lt;br&gt;
+
+Low
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+
+
+Medium
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+
+High
+]
+]
+]
+
+???
+
+spearman rank correlation squared
+
+
+---
+
+.left-column[
+# Density
+## Outlying
+]
+
+.right-column[
+
+.pull-left[
+&lt;img src="img/outlyingLow.png" width="70%" style="display: block; margin: auto 0 auto auto;" /&gt;
+
+&lt;img src="img/outlyingMedium.png" width="70%" style="display: block; margin: auto 0 auto auto;" /&gt;
+
+&lt;img src="img/outylingHigh.png" width="70%" style="display: block; margin: auto 0 auto auto;" /&gt;
+]
+
+.pull-right[
+.Large[
+&lt;br&gt;
+
+Low
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+
+
+Medium
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+
+High
+]
+]
+]
+
+
+???
+
+`\(\dfrac{length(T_{(outliers)})}{length(T)}\)`
+
+
+---
+
+.left-column[
+# Density
+## Outlying
+## Sparse
+]
+
+.right-column[
+
+.pull-left[
+&lt;img src="img/sparseLow.png" width="70%" style="display: block; margin: auto 0 auto auto;" /&gt;
+
+&lt;img src="img/sparseMedium.png" width="70%" style="display: block; margin: auto 0 auto auto;" /&gt;
+
+&lt;img src="img/sparseHigh.png" width="70%" style="display: block; margin: auto 0 auto auto;" /&gt;
+]
+
+.pull-right[
+.Large[
+&lt;br&gt;
+
+Low
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+
+
+Medium
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+
+High
+]
+]
+]
+
+
+
+
+---
+
+.left-column[
+# Density
+## Outlying
+## Sparse
+## Skewed
+]
+
+.right-column[
+
+.pull-left[
+&lt;img src="img/skewedLow.png" width="70%" style="display: block; margin: auto 0 auto auto;" /&gt;
+
+&lt;img src="img/skewedMedium.png" width="70%" style="display: block; margin: auto 0 auto auto;" /&gt;
+
+&lt;img src="img/skewedHigh.png" width="70%" style="display: block; margin: auto 0 auto auto;" /&gt;
+]
+
+.pull-right[
+.Large[
+&lt;br&gt;
+
+Low
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+
+
+Medium
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+
+High
+]
+]
+]
+
+---
+
+.left-column[
+# Density
+## Outlying
+## Sparse
+## Skewed
+## Clumpy
+
+]
+
+.right-column[
+
+.pull-left[
+&lt;img src="img/clumpyLow.png" width="70%" style="display: block; margin: auto 0 auto auto;" /&gt;
+
+&lt;img src="img/clumpyMedium.png" width="70%" style="display: block; margin: auto 0 auto auto;" /&gt;
+
+&lt;img src="img/clumpyHigh.png" width="70%" style="display: block; margin: auto 0 auto auto;" /&gt;
+]
+
+.pull-right[
+.Large[
+&lt;br&gt;
+
+Low
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+
+
+Medium
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+
+High
+]
+]
+]
+
+
+
+
+---
+
+.left-column[
+# Density
+## Outlying
+## Sparse
+## Skewed
+## Clumpy
+## Striated
+]
+
+.right-column[
+
+.pull-left[
+&lt;img src="img/striatedLow.png" width="70%" style="display: block; margin: auto 0 auto auto;" /&gt;
+
+&lt;img src="img/striatedMedium.png" width="70%" style="display: block; margin: auto 0 auto auto;" /&gt;
+
+&lt;img src="img/StriatedHigh.png" width="70%" style="display: block; margin: auto 0 auto auto;" /&gt;
+]
+
+.pull-right[
+.Large[
+&lt;br&gt;
+
+Low
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+
+
+Medium
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+
+High
+]
+]
+]
+
+
+---
+
+
+
+.pull-left[
+&lt;img src="gustavus_talk_sept2019_files/figure-html/unnamed-chunk-34-1.svg" width="75%" style="display: block; margin: auto;" /&gt;
+
+&lt;table&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;color: black !important;background-color: white !important;"&gt; Outlying &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 0.0865 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-weight: bold;color: black !important;background-color: silver !important;"&gt; Skewed &lt;/td&gt;
+   &lt;td style="text-align:right;font-weight: bold;color: black !important;background-color: silver !important;"&gt; 0.7921 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-weight: bold;color: black !important;background-color: silver !important;"&gt; Clumpy &lt;/td&gt;
+   &lt;td style="text-align:right;font-weight: bold;color: black !important;background-color: silver !important;"&gt; 0.2708 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;color: black !important;background-color: white !important;"&gt; Sparse &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 0.0835 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;color: black !important;background-color: white !important;"&gt; Striated &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 0.1639 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-weight: bold;color: black !important;background-color: gainsboro !important;"&gt; Convex &lt;/td&gt;
+   &lt;td style="text-align:right;font-weight: bold;color: black !important;background-color: gainsboro !important;"&gt; 0.2138 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-weight: bold;color: black !important;background-color: silver !important;"&gt; Skinny &lt;/td&gt;
+   &lt;td style="text-align:right;font-weight: bold;color: black !important;background-color: silver !important;"&gt; 0.7661 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-weight: bold;color: black !important;background-color: silver !important;"&gt; Stringy &lt;/td&gt;
+   &lt;td style="text-align:right;font-weight: bold;color: black !important;background-color: silver !important;"&gt; 0.5314 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;color: black !important;background-color: white !important;"&gt; Monotonic &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 0.0051 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+
+]
+
+
+
+.pull-right[
+&lt;img src="gustavus_talk_sept2019_files/figure-html/unnamed-chunk-36-1.svg" width="75%" style="display: block; margin: auto;" /&gt;
+
+&lt;table&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;color: black !important;background-color: white !important;"&gt; Outlying &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 0.1231 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-weight: bold;color: black !important;background-color: gainsboro !important;"&gt; Skewed &lt;/td&gt;
+   &lt;td style="text-align:right;font-weight: bold;color: black !important;background-color: gainsboro !important;"&gt; 0.6137 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-weight: bold;color: black !important;background-color: gainsboro !important;"&gt; Clumpy &lt;/td&gt;
+   &lt;td style="text-align:right;font-weight: bold;color: black !important;background-color: gainsboro !important;"&gt; 0.0898 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;color: black !important;background-color: white !important;"&gt; Sparse &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 0.0814 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;color: black !important;background-color: white !important;"&gt; Striated &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 0.0703 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-weight: bold;color: black !important;background-color: silver !important;"&gt; Convex &lt;/td&gt;
+   &lt;td style="text-align:right;font-weight: bold;color: black !important;background-color: silver !important;"&gt; 0.5133 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-weight: bold;color: black !important;background-color: gainsboro !important;"&gt; Skinny &lt;/td&gt;
+   &lt;td style="text-align:right;font-weight: bold;color: black !important;background-color: gainsboro !important;"&gt; 0.5628 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-weight: bold;color: black !important;background-color: gainsboro !important;"&gt; Stringy &lt;/td&gt;
+   &lt;td style="text-align:right;font-weight: bold;color: black !important;background-color: gainsboro !important;"&gt; 0.3490 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;color: black !important;background-color: white !important;"&gt; Monotonic &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 0.0041 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+
+]
+
+---
+class: middle, center
+
+# Random forests 
+
+---
+
+# Classification trees
+
+&lt;img src="img/cat_decisions.png" width="60%" style="display: block; margin: auto;" /&gt;
+
+
+---
+
+.large[Start with all observations in one group]
+
+
+
+&lt;img src="gustavus_talk_sept2019_files/figure-html/unnamed-chunk-40-1.svg" style="display: block; margin: auto;" /&gt;
+
+--
+
+.large[Find the variable/split that best separates the classes]
+
+
+---
+
+.large[Find the variable/split that best separates the classes]
+
+&lt;img src="gustavus_talk_sept2019_files/figure-html/unnamed-chunk-41-1.svg" style="display: block; margin: auto;" /&gt;
+
+--
+
+.large[Within each split, find the best variable/split that separates the outcomes]
+
+---
+
+.large[Within each split, find the best variable/split that separates the outcomes]
+
+&lt;img src="gustavus_talk_sept2019_files/figure-html/unnamed-chunk-42-1.svg" style="display: block; margin: auto;" /&gt;
+
+--
+
+.large[Continue until the groups are too small or sufficiently "pure"]
+
+
+---
+
+# Visualizing the tree
+
+&lt;img src="gustavus_talk_sept2019_files/figure-html/unnamed-chunk-43-1.svg" width="70%" style="display: block; margin: auto;" /&gt;
+
+
+---
+
+# Classification trees
+.large[
+.pull-left[
+**Advantages**
+
+- Easy to explain 
+
+- May more closely mirror human decision-making than other approaches 
+
+- Can be displayed graphically, and are easily interpreted even by a non-expert (especially if they are small) 
+
+- Can easily handle categorical predictors 
+]
+
+.pull-right[
+**Disadvantages**
+
+- Generally do not have the same level of predictive accuracy as many other classification  approaches 
+
+- High variability
+]
+]
+
+---
+
+# Growing a random forest
+
+.large[
+- Sample with replacement from your training data set to get B bootstrapped training sets
+
+- Grow a tree for each of the B training sets (grow deep, don't prune)
+
+    + For each split only consider a random sample of m out of p predictors
+
+
+- Majority (plurality) vote to classify an observation
+]
+
+---
+background-image: url(figures/ex_random_forest.png)
+background-size: contain 
+
+
+
+---
+
+# Training data: 14865 signal plots
+
+
+
+&lt;img src="gustavus_talk_sept2019_files/figure-html/unnamed-chunk-45-1.svg" width="100%" /&gt;
+
+---
+
+#Training data: 14865 null plots
+
+&lt;img src="gustavus_talk_sept2019_files/figure-html/unnamed-chunk-46-1.svg" style="display: block; margin: auto;" /&gt;
+
+---
+
+# Model evaluation
+.large[
+- Generated 1000 signal plots
+
+- Calculated the 9 scagnostics on each
+
+- Used random forest to classify as "signal" or "noise"
+]
+
+--
+
+.content-box-blue[
+.large[972 of the 1000 signal plots were correctly classified]
+]
+
+--
+
+.content-box-yellow[
+.large[
+Also evaluated on 1000 lineups of size 20, with unspecified number of signal plots
+
+- 93.5% of linear plots identified as signal; 5.3% false positive rate
+]
+]
+
+
+---
+class: middle, center
+# Computer vision models
+
+---
+# Motivation: Giora Simchoni's blog post
+
+&lt;img src="figures/giora-blog.png" width="789" /&gt;
+
+---
+
+## Giora trained a computer vision model two ways
+
+.Large[
+- classification: significant correlation vs not
+
+- regression: to predict the correlation
+]
+
+---
+class: clear
+
+## Success, picked plot 16
+
+&lt;img src="img/simchoni_test1.png" width="100%" /&gt;
+
+
+---
+class: clear
+
+## Success, failed to pick plot 4
+
+&lt;img src="img/simchoni_test2.png" width="100%" /&gt;
+
+---
+class: clear
+
+## Fail! Doesn't see the strong nonlinear association. Picks the most linear.
+
+&lt;img src="img/simchoni_test3.png" width="90%" /&gt;
+
+---
+
+# Deep learning
+
+&lt;img src="img/image_classification.png" width="95%" style="display: block; margin: auto;" /&gt;
+
+
+.footnote[
+Source: [Abdellatif Abdelfattah](https://medium.com/@tifa2up/image-classification-using-deep-neural-networks-a-beginner-friendly-approach-using-tensorflow-94b0a090ccd4)
+]
+
+---
+
+# Deep learning
+
+&lt;img src="https://miro.medium.com/max/1230/1*DGDcAQmm0e0kW_1iON1e-Q.jpeg" height="425" /&gt;
+
+
+.footnote[Source: [Chihuahua or Muffin? Brad Folkens](https://blog.cloudsight.ai/chihuahua-or-muffin-1bdf02ec1680)]
+
+
+---
+
+## Neural networks
+
+- `\(x_i\)` = input variable
+
+- `\(v_j\)` = function of linear combinations of the inputs (e.g. sigmoid)
+
+- `\(y_k\)` = function of linear combinations of the `\(v_j\)` (e.g. softmax)
+
+&lt;img src="img/nn_simple.png" width="70%" style="display: block; margin: auto;" /&gt;
+
+.footnote[
+.scriptsize[Source: [Cheng &amp; Titterington (1994)](https://projecteuclid.org/euclid.ss/1177010638)]
+]
+???
+
+Derived features Zm are created from linear combinations of the inputs, and then the target Yk is modeled as a function of linear combinations of the Zm
+
+---
+
+# Regression as a neural network
+
+&lt;img src="img/nn_regression.png" width="70%" style="display: block; margin: auto;" /&gt;
+
+.footnote[
+.scriptsize[Source: [Cheng &amp; Titterington (1994)](https://projecteuclid.org/euclid.ss/1177010638)]
+]
+
+---
+
+# Images as data
+
+&lt;img src="img/Corgi3.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+---
+
+# Filtering patterns
+
+&lt;img src="img/nn_filter.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+.footnote[
+Source: [Deep Learning with R](https://www.manning.com/books/deep-learning-with-r)
+]
+
+---
+
+# Pooling to find spatial hierarchies
+
+&lt;img src="img/covnet2.jpg" width="100%" style="display: block; margin: auto;" /&gt;
+
+.footnote[
+Source: Di Cook's [DSSV slides](http://www.dicook.org/files/dssv19/slides#1)
+]
+
+???
+to induce spatial-filter hierarchies 
+
+---
+
+# Rinse &amp; repeat to reveal other hierarchies
+
+&lt;img src="img/covnet1.jpg" width="80%" style="display: block; margin: auto;" /&gt;
+
+.footnote[
+Source: Di Cook's [DSSV slides](http://www.dicook.org/files/dssv19/slides#1)
+]
+
+---
+background-image: url(img/nn_cat.png)
+background-size: cover
+
+---
+
+# Approach I
+
+.large[
+- Save the scatterplots as images, then train your CNN
+
+- Di Cook and Shuofan Zhang at Monash University worked on this to detect linearity
+
+- Trained Keras model with 60,000 training data sets for each class: linear vs. not
+
+- Accuracy with simulated test data, 93% 
+    + null error 0.0179
+    + linear error 0.1176
+]
+
+
+---
+
+# Approach II
+
+.large[ 
+- Create images showing the "shape" of the scatterplot, then train your CNN
+
+.pull-left[
+&lt;img src="img/nn_hulls1.png" width="70%" style="display: block; margin: auto;" /&gt;
+]
+
+.pull-right[
+&lt;img src="img/nn_hulls2.png" width="70%" style="display: block; margin: auto;" /&gt;
+]
+
+- Elliot Pickens and I worked on this last spring
+]
+
+---
+
+# Approach II
+.large[
+Trained Keras model on simulated 300 plots for each class
+
+4200 total plots in the training set
+
+.pull-left[
+- **Uniform**
+
+- **Spherical** 
+
+- **Binormal** 
+
+- **Funnel** 
+
+- **Exponential**
+]
+
+.pull-right[
+
+- **Quadratic** 
+
+- **Clustered** 
+
+- **Doughnut** 
+
+- **Stripe** 
+
+- **Sparse** 
+]
+]
+
+???
+1. **Uniform** (2D Poisson process)
+2. **Spherical** (spherical normal)
+3. **Binormal** (bivariate normal with `\(\rho = \pm 0.6\)`)
+4. **Funnel** (bivariate log-normal with `\(\rho = \pm 0.6\)`)
+5. **Exponential** (exponential growth/decay plus random error)
+6. **Quadratic** (positive/negative quadratic function plus random error)
+7. **Clustered** (three separated spherical normals at the vertices of an equilateral triangle)
+8. **Doughnut** (two polar uniforms separated by a moat of white space)
+9. **Stripe** (product of Uniform and integer [1, 5])
+10. **Sparse** (product of integer [1, 3] with itself)
+
+---
+
+## Approach II
+
+.pull-left[
+.large[
+- 2100 images in the testing set (150 per class)
+
+- Precision = true positive
+
+- Recall = sensitivity
+]
+]
+
+.pull-right[
+Class | Precision | Recall
+------|---|---
+Uniform | 0.97 | 0.99 
+Spherical | 0.70 | 0.61 
+Binormal | 0.85 | 0.81 
+N. Binormal | 0.96 | 0.87 
+Funnel | 0.96 | 0.90 
+N. Funnel | 0.94 | 0.93 
+N. Expo | 0.97 | 0.99 
+Expo | 0.97 | 0.97 
+Quadratic | 0.96 | 0.97 
+Clustered | 0.73 | 0.83 
+Doughnut  | 0.73  | 0.83 
+Stripe | 0.89  | 0.98 
+Sparse | 1.00 | 1.00 
+Logarithmic | 0.99 | 0.92 
+]
+
+
+???
+Avg. precision and recall is  about 90%
+
+
+Precision = proportion of plots classified as uniform that are actually uniform
+
+Recall = proportion of uniform plots that were actually predicted to be uniform
+
+
+---
+
+# Discussion
+
+.large[
+- It's possible to automate the detection of plots, but the training sets are key
+
+- If you use a statistical model/algorithm, you need to carefully consider your predictors
+
+- Computer's haven't beaten human ability to detect plot type (Cook &amp; Zhang)
+
+- Promising results for model diagnosis, exploring large data sets, and prototyping new statistical graphics
+]
+
+---
+
+# Joint work
+.large[
+#### Deep learning:  
+[Giora Simchoni](http://giorasimchoni.com/2018/02/07/2018-02-07-book-em-danno/); [Di Cook](http://www.dicook.org/) &amp; Shuofan Zhang; Elliot Pickens
+
+
+#### Inference: 
+Di Cook, Heike Hofmann, [Mahbub Majumder](http://mamajumder.github.io/html/experiments.html), Andreas Buja, Hadley Wickham, Eric Hare, [Susan Vanderplas](https://srvanderplas.netlify.com/), Niladri Roy Chowdhury, Nat Tomasetti
+
+
+#### Contact: 
+[<i class="fas  fa-envelope " style="color:black;"></i>](https://aloy.rbind.io/) aloy@carleton.edu [<i class="fab  fa-github " style="color:black;"></i>](https://github.com/aloy) aloy
+
+]
+---
+
+# Further reading
+
+.large[
+- Buja et al (2009) Statistical Inference for Exploratory Data Analysis and Model Diagnostics, *Roy. Soc. Ph. Tr., A*
+
+- Majumder et al (2013) Validation of Visual Statistical Inference, Applied to Linear Models, *JASA*
+
+- Wickham et al (2010) Graphical Inference for Infovis, *InfoVis*
+
+- Hofmann et al (2012) Graphical Tests for Power Comparison of Competing Design, *InfoVis*
+
+- Loy et al (2017) Model Choice and Diagnostics for Linear Mixed-Effects Models Using Statistics on Street Corners, *JCGS*
+
+]
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();</script>
+
+<script>
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

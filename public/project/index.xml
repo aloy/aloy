@@ -2,41 +2,41 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Projects on Adam Loy</title>
-    <link>https://aloy.rbind.io/project/</link>
+    <link>/project/</link>
     <description>Recent content in Projects on Adam Loy</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018 Adam Loy</copyright>
     <lastBuildDate>Sat, 21 Oct 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://aloy.rbind.io/project/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/project/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Data Science for Statistics</title>
-      <link>https://aloy.rbind.io/project/ds4stats/</link>
+      <link>/project/ds4stats/</link>
       <pubDate>Sat, 21 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://aloy.rbind.io/project/ds4stats/</guid>
+      <guid>/project/ds4stats/</guid>
       <description>Shonda Kuiper, Laura Chihara and I developed a series of tutorials and case studies that can be used in a variety of courses to introduce data-scientific concepts. You can find these materials on Github.
 This work was funded by grants from the Associated Colleges of the Midwest and the Teagle Foundation.</description>
     </item>
     
     <item>
       <title>lmeresampler: Bootstrapping Clustered Data in R</title>
-      <link>https://aloy.rbind.io/project/lmeresampler/</link>
+      <link>/project/lmeresampler/</link>
       <pubDate>Sat, 21 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://aloy.rbind.io/project/lmeresampler/</guid>
+      <guid>/project/lmeresampler/</guid>
       <description></description>
     </item>
     
     <item>
       <title>qqplotr: ggplot2 Compatible Quantile-Quantile plots in R</title>
-      <link>https://aloy.rbind.io/project/qqplotr/</link>
+      <link>/project/qqplotr/</link>
       <pubDate>Wed, 11 May 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://aloy.rbind.io/project/qqplotr/</guid>
+      <guid>/project/qqplotr/</guid>
       <description></description>
     </item>
     
