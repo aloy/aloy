@@ -6,7 +6,7 @@
     <description>Recent content in Adam Loy on Adam Loy</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>&amp;copy; 2018 Adam Loy</copyright>
+    <copyright>&amp;copy; 2019 Adam Loy</copyright>
     <lastBuildDate>Wed, 20 Apr 2016 00:00:00 +0000</lastBuildDate>
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
@@ -64,6 +64,15 @@
       <guid>/talk/2018-lanl/</guid>
       <description>&lt;script async class=&#34;speakerdeck-embed&#34; data-id=&#34;c2519d9e6c5a4970b39bdec9a5a1b176&#34; data-ratio=&#34;1.33333333333333&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
 </description>
+    </item>
+    
+    <item>
+      <title>ggplot2 Compatible Quantile-Quantile Plots in R</title>
+      <link>/publication/2018-rjournal-qqplotr/</link>
+      <pubDate>Sat, 01 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/2018-rjournal-qqplotr/</guid>
+      <description></description>
     </item>
     
     <item>
@@ -142,15 +151,6 @@
       <guid>/talk/2017-teagle/</guid>
       <description>&lt;script async class=&#34;speakerdeck-embed&#34; data-id=&#34;2b583afbcd984fe9a0e281a63af63c63&#34; data-ratio=&#34;1.33333333333333&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
 </description>
-    </item>
-    
-    <item>
-      <title>Variations of Q-Q Plots: The Power of Our Eyes!</title>
-      <link>/publication/2016-tas-qq-plots/</link>
-      <pubDate>Thu, 09 Jun 2016 00:00:00 +0000</pubDate>
-      
-      <guid>/publication/2016-tas-qq-plots/</guid>
-      <description></description>
     </item>
     
   </channel>

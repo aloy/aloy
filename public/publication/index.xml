@@ -6,7 +6,7 @@
     <description>Recent content in Publications on Adam Loy</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>&amp;copy; 2018 Adam Loy</copyright>
+    <copyright>&amp;copy; 2019 Adam Loy</copyright>
     <lastBuildDate>Sun, 01 Jan 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/publication/index.xml" rel="self" type="application/rss+xml" />
@@ -27,6 +27,15 @@
       <pubDate>Thu, 10 Jan 2019 00:00:00 +0000</pubDate>
       
       <guid>/publication/2019-cost/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ggplot2 Compatible Quantile-Quantile Plots in R</title>
+      <link>/publication/2018-rjournal-qqplotr/</link>
+      <pubDate>Sat, 01 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/2018-rjournal-qqplotr/</guid>
       <description></description>
     </item>
     

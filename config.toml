@@ -1,6 +1,6 @@
 baseurl = "https://aloy.rbind.io/"
 title = "Adam Loy"
-copyright = "&copy; 2018 Adam Loy"
+copyright = "&copy; 2019 Adam Loy"
 theme = "hugo-academic"
 enableEmoji = true
 footnotereturnlinkcontents = "<sup>^</sup>"
