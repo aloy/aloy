@@ -2,60 +2,60 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>R on Adam Loy</title>
-    <link>/tags/r/</link>
+    <link>https://aloy.rbind.io/tags/r/</link>
     <description>Recent content in R on Adam Loy</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2019 Adam Loy</copyright>
     <lastBuildDate>Sat, 21 Oct 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/r/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://aloy.rbind.io/tags/r/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Data Science for Statistics</title>
-      <link>/project/ds4stats/</link>
+      <link>https://aloy.rbind.io/project/ds4stats/</link>
       <pubDate>Sat, 21 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>/project/ds4stats/</guid>
+      <guid>https://aloy.rbind.io/project/ds4stats/</guid>
       <description>Shonda Kuiper, Laura Chihara and I developed a series of tutorials and case studies that can be used in a variety of courses to introduce data-scientific concepts. You can find these materials on Github.
 This work was funded by grants from the Associated Colleges of the Midwest and the Teagle Foundation.</description>
     </item>
     
     <item>
       <title>lmeresampler: Bootstrapping Clustered Data in R</title>
-      <link>/project/lmeresampler/</link>
+      <link>https://aloy.rbind.io/project/lmeresampler/</link>
       <pubDate>Sat, 21 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>/project/lmeresampler/</guid>
+      <guid>https://aloy.rbind.io/project/lmeresampler/</guid>
       <description></description>
     </item>
     
     <item>
       <title>qqplotr: ggplot2 Compatible Quantile-Quantile plots in R</title>
-      <link>/project/qqplotr/</link>
+      <link>https://aloy.rbind.io/project/qqplotr/</link>
       <pubDate>Wed, 11 May 2016 00:00:00 +0000</pubDate>
       
-      <guid>/project/qqplotr/</guid>
+      <guid>https://aloy.rbind.io/project/qqplotr/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Recapping the ACM Harnessing Big Data Workshop</title>
-      <link>/post/hello-world/</link>
+      <link>https://aloy.rbind.io/post/hello-world/</link>
       <pubDate>Mon, 10 Aug 2015 00:00:00 +0000</pubDate>
       
-      <guid>/post/hello-world/</guid>
+      <guid>https://aloy.rbind.io/post/hello-world/</guid>
       <description>The Associated Colleges of Midwest funded a workshop where faculty from member institutions could brainstorm how resources might be pooled across the ACM schools (of which Beloit, Coe, Grinnell, Lawrence, Luther, Macalester, and Ripon were represented) to provide opportunities in our curriculum related to data science. I really enjoyed this workshop and heard some great ideas about how to keep my statistics curriculum relevant in my students’ minds, as well as some possible opportunities for ACM schools to pool strengths, rather than attempting to replicate data science curricula on each campus.</description>
     </item>
     
     <item>
       <title>A Nice Piece on Hadley Wickham</title>
-      <link>/post/hello-world/</link>
+      <link>https://aloy.rbind.io/post/hello-world/</link>
       <pubDate>Wed, 29 Jul 2015 00:00:00 +0000</pubDate>
       
-      <guid>/post/hello-world/</guid>
-      <description> There is a nice piece over at Priceonomics on Hadley Wickham’s contribution to R. I especially like the following quote from Hadley:
+      <guid>https://aloy.rbind.io/post/hello-world/</guid>
+      <description>There is a nice piece over at Priceonomics on Hadley Wickham’s contribution to R. I especially like the following quote from Hadley:
  The analyses that get me excited are not Google crunching a terabyte of web ad data in order to optimize revenue… [but rather] the biologists who are absolutely passionate about this one swampfly and now they can use R and they can understand it.
  </description>
     </item>

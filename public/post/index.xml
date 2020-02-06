@@ -2,42 +2,42 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Adam Loy</title>
-    <link>/post/</link>
+    <link>https://aloy.rbind.io/post/</link>
     <description>Recent content in Posts on Adam Loy</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2019 Adam Loy</copyright>
     <lastBuildDate>Mon, 10 Aug 2015 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://aloy.rbind.io/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Recapping the ACM Harnessing Big Data Workshop</title>
-      <link>/post/hello-world/</link>
+      <link>https://aloy.rbind.io/post/hello-world/</link>
       <pubDate>Mon, 10 Aug 2015 00:00:00 +0000</pubDate>
       
-      <guid>/post/hello-world/</guid>
+      <guid>https://aloy.rbind.io/post/hello-world/</guid>
       <description>The Associated Colleges of Midwest funded a workshop where faculty from member institutions could brainstorm how resources might be pooled across the ACM schools (of which Beloit, Coe, Grinnell, Lawrence, Luther, Macalester, and Ripon were represented) to provide opportunities in our curriculum related to data science. I really enjoyed this workshop and heard some great ideas about how to keep my statistics curriculum relevant in my students’ minds, as well as some possible opportunities for ACM schools to pool strengths, rather than attempting to replicate data science curricula on each campus.</description>
     </item>
     
     <item>
       <title>A Nice Piece on Hadley Wickham</title>
-      <link>/post/hello-world/</link>
+      <link>https://aloy.rbind.io/post/hello-world/</link>
       <pubDate>Wed, 29 Jul 2015 00:00:00 +0000</pubDate>
       
-      <guid>/post/hello-world/</guid>
-      <description> There is a nice piece over at Priceonomics on Hadley Wickham’s contribution to R. I especially like the following quote from Hadley:
+      <guid>https://aloy.rbind.io/post/hello-world/</guid>
+      <description>There is a nice piece over at Priceonomics on Hadley Wickham’s contribution to R. I especially like the following quote from Hadley:
  The analyses that get me excited are not Google crunching a terabyte of web ad data in order to optimize revenue… [but rather] the biologists who are absolutely passionate about this one swampfly and now they can use R and they can understand it.
  </description>
     </item>
     
     <item>
       <title>Sampling Variability and the G.O.P. Debate</title>
-      <link>/post/hello-world/</link>
+      <link>https://aloy.rbind.io/post/hello-world/</link>
       <pubDate>Tue, 21 Jul 2015 00:00:00 +0000</pubDate>
       
-      <guid>/post/hello-world/</guid>
+      <guid>https://aloy.rbind.io/post/hello-world/</guid>
       <description>The Upshot featured a nice article on the role of sampling variability in the selection of the 10 candidates invited to the first GOP debate. The post includes a nice visualization of simulated possible participants, assuming that basic polling data are “true”.
 Students in an introductory statistics course, especially one using a simulation-based curriculum, would benefit from reading this story. The article is a great spring board for talking about simulation and sampling variability, and also illustrates that these topics are relevant!</description>
     </item>

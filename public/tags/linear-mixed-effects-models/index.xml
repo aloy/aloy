@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Linear Mixed Effects Models on Adam Loy</title>
-    <link>/tags/linear-mixed-effects-models/</link>
+    <link>https://aloy.rbind.io/tags/linear-mixed-effects-models/</link>
     <description>Recent content in Linear Mixed Effects Models on Adam Loy</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2019 Adam Loy</copyright>
     <lastBuildDate>Sat, 21 Oct 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/linear-mixed-effects-models/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://aloy.rbind.io/tags/linear-mixed-effects-models/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>lmeresampler: Bootstrapping Clustered Data in R</title>
-      <link>/project/lmeresampler/</link>
+      <link>https://aloy.rbind.io/project/lmeresampler/</link>
       <pubDate>Sat, 21 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>/project/lmeresampler/</guid>
+      <guid>https://aloy.rbind.io/project/lmeresampler/</guid>
       <description></description>
     </item>
     
