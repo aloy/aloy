@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Adam Loy on Adam Loy</title>
-    <link>https://aloy.rbind.io/</link>
+    <link>/</link>
     <description>Recent content in Adam Loy on Adam Loy</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -12,94 +12,94 @@
     
     <item>
       <title>Exploring automatic evaluation of statistical graphics</title>
-      <link>https://aloy.rbind.io/talk/2019-isu/</link>
+      <link>/talk/2019-isu/</link>
       <pubDate>Thu, 03 Oct 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://aloy.rbind.io/talk/2019-isu/</guid>
+      <guid>/talk/2019-isu/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Can&#39;t a computer do that? Exploring automatic evaluation of statistical graphics</title>
-      <link>https://aloy.rbind.io/talk/2019-gustavus/</link>
+      <link>/talk/2019-gustavus/</link>
       <pubDate>Mon, 30 Sep 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://aloy.rbind.io/talk/2019-gustavus/</guid>
+      <guid>/talk/2019-gustavus/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Visual inference for model checking</title>
-      <link>https://aloy.rbind.io/talk/jsm2019/</link>
+      <link>/talk/jsm2019/</link>
       <pubDate>Wed, 31 Jul 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://aloy.rbind.io/talk/jsm2019/</guid>
+      <guid>/talk/jsm2019/</guid>
       <description>&lt;script async class=&#34;speakerdeck-embed&#34; data-id=&#34;12e0ae55189e445daa24025dfb46b9cf&#34; data-ratio=&#34;1.33333333333333&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
 </description>
     </item>
     
     <item>
       <title>Supporting Data Science in the Statistics Curriculum</title>
-      <link>https://aloy.rbind.io/publication/2019-jse/</link>
+      <link>/publication/2019-jse/</link>
       <pubDate>Tue, 02 Apr 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://aloy.rbind.io/publication/2019-jse/</guid>
+      <guid>/publication/2019-jse/</guid>
       <description></description>
     </item>
     
     <item>
       <title>A tale of four cities: exploring the soul of State College, Detroit, Milledgeville and Biloxi</title>
-      <link>https://aloy.rbind.io/publication/2019-cost/</link>
+      <link>/publication/2019-cost/</link>
       <pubDate>Thu, 10 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://aloy.rbind.io/publication/2019-cost/</guid>
+      <guid>/publication/2019-cost/</guid>
       <description></description>
     </item>
     
     <item>
       <title>A discussion of visual inference</title>
-      <link>https://aloy.rbind.io/talk/2018-lanl/</link>
+      <link>/talk/2018-lanl/</link>
       <pubDate>Wed, 05 Dec 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://aloy.rbind.io/talk/2018-lanl/</guid>
+      <guid>/talk/2018-lanl/</guid>
       <description>&lt;script async class=&#34;speakerdeck-embed&#34; data-id=&#34;c2519d9e6c5a4970b39bdec9a5a1b176&#34; data-ratio=&#34;1.33333333333333&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
 </description>
     </item>
     
     <item>
       <title>ggplot2 Compatible Quantile-Quantile Plots in R</title>
-      <link>https://aloy.rbind.io/publication/2018-rjournal-qqplotr/</link>
+      <link>/publication/2018-rjournal-qqplotr/</link>
       <pubDate>Sat, 01 Dec 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://aloy.rbind.io/publication/2018-rjournal-qqplotr/</guid>
+      <guid>/publication/2018-rjournal-qqplotr/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Q-Q plots: To de-trend, or not to de-trend</title>
-      <link>https://aloy.rbind.io/talk/2018-macalester/</link>
+      <link>/talk/2018-macalester/</link>
       <pubDate>Thu, 01 Nov 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://aloy.rbind.io/talk/2018-macalester/</guid>
+      <guid>/talk/2018-macalester/</guid>
       <description>&lt;script async class=&#34;speakerdeck-embed&#34; data-id=&#34;11bdb6d8785747c19531edc45af8c7b4&#34; data-ratio=&#34;1.33333333333333&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
 </description>
     </item>
     
     <item>
       <title>Statistics in the data science curriculum</title>
-      <link>https://aloy.rbind.io/talk/2018-lads/</link>
+      <link>/talk/2018-lads/</link>
       <pubDate>Fri, 12 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://aloy.rbind.io/talk/2018-lads/</guid>
+      <guid>/talk/2018-lads/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Data Science for Statistics</title>
-      <link>https://aloy.rbind.io/project/ds4stats/</link>
+      <link>/project/ds4stats/</link>
       <pubDate>Sat, 21 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://aloy.rbind.io/project/ds4stats/</guid>
+      <guid>/project/ds4stats/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://www.grinnell.edu/users/kuipers&#34; target=&#34;_blank&#34;&gt;Shonda Kuiper&lt;/a&gt;, &lt;a href=&#34;http://www.people.carleton.edu/~lchihara/&#34; target=&#34;_blank&#34;&gt;Laura Chihara&lt;/a&gt; and I developed a series of tutorials and case studies that can be used in a variety of courses to introduce data-scientific concepts. You can find these materials on &lt;a href=&#34;https://github.com/ds4stats&#34; target=&#34;_blank&#34;&gt;Github&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;This work was funded by grants from the Associated Colleges of the Midwest and the Teagle Foundation.&lt;/p&gt;
@@ -108,47 +108,47 @@
     
     <item>
       <title>lmeresampler: Bootstrapping Clustered Data in R</title>
-      <link>https://aloy.rbind.io/project/lmeresampler/</link>
+      <link>/project/lmeresampler/</link>
       <pubDate>Sat, 21 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://aloy.rbind.io/project/lmeresampler/</guid>
+      <guid>/project/lmeresampler/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Training Statisticians to Be Effective Instructors</title>
-      <link>https://aloy.rbind.io/talk/2017-jsm-panel/</link>
+      <link>/talk/2017-jsm-panel/</link>
       <pubDate>Mon, 31 Jul 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://aloy.rbind.io/talk/2017-jsm-panel/</guid>
+      <guid>/talk/2017-jsm-panel/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Model Choice and Diagnostics for Linear Mixed-Effects Models Using Statistics on Street Corners</title>
-      <link>https://aloy.rbind.io/publication/2017-jcgs/</link>
+      <link>/publication/2017-jcgs/</link>
       <pubDate>Fri, 19 May 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://aloy.rbind.io/publication/2017-jcgs/</guid>
+      <guid>/publication/2017-jcgs/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Modules for Infusing Data Science into the Statistics Curriculum</title>
-      <link>https://aloy.rbind.io/talk/2017-uscots/</link>
+      <link>/talk/2017-uscots/</link>
       <pubDate>Mon, 15 May 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://aloy.rbind.io/talk/2017-uscots/</guid>
+      <guid>/talk/2017-uscots/</guid>
       <description>&lt;script async class=&#34;speakerdeck-embed&#34; data-id=&#34;d16c0455542946b68d5a068492b12a3e&#34; data-ratio=&#34;1.33333333333333&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
 </description>
     </item>
     
     <item>
       <title>Making Decisions with Data: Planning for Collaborative Courses in Data Science</title>
-      <link>https://aloy.rbind.io/talk/2017-teagle/</link>
+      <link>/talk/2017-teagle/</link>
       <pubDate>Sat, 29 Apr 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://aloy.rbind.io/talk/2017-teagle/</guid>
+      <guid>/talk/2017-teagle/</guid>
       <description>&lt;script async class=&#34;speakerdeck-embed&#34; data-id=&#34;2b583afbcd984fe9a0e281a63af63c63&#34; data-ratio=&#34;1.33333333333333&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
 </description>
     </item>

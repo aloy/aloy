@@ -2,32 +2,32 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Stat Ed on Adam Loy</title>
-    <link>https://aloy.rbind.io/tags/stat-ed/</link>
+    <link>/tags/stat-ed/</link>
     <description>Recent content in Stat Ed on Adam Loy</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2019 Adam Loy</copyright>
     <lastBuildDate>Sat, 21 Oct 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://aloy.rbind.io/tags/stat-ed/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/stat-ed/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Data Science for Statistics</title>
-      <link>https://aloy.rbind.io/project/ds4stats/</link>
+      <link>/project/ds4stats/</link>
       <pubDate>Sat, 21 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://aloy.rbind.io/project/ds4stats/</guid>
+      <guid>/project/ds4stats/</guid>
       <description>Shonda Kuiper, Laura Chihara and I developed a series of tutorials and case studies that can be used in a variety of courses to introduce data-scientific concepts. You can find these materials on Github.
 This work was funded by grants from the Associated Colleges of the Midwest and the Teagle Foundation.</description>
     </item>
     
     <item>
       <title>Sampling Variability and the G.O.P. Debate</title>
-      <link>https://aloy.rbind.io/post/hello-world/</link>
+      <link>/post/hello-world/</link>
       <pubDate>Tue, 21 Jul 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://aloy.rbind.io/post/hello-world/</guid>
+      <guid>/post/hello-world/</guid>
       <description>The Upshot featured a nice article on the role of sampling variability in the selection of the 10 candidates invited to the first GOP debate. The post includes a nice visualization of simulated possible participants, assuming that basic polling data are “true”.
 Students in an introductory statistics course, especially one using a simulation-based curriculum, would benefit from reading this story. The article is a great spring board for talking about simulation and sampling variability, and also illustrates that these topics are relevant!</description>
     </item>

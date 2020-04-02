@@ -2,94 +2,94 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Recent &amp; Upcoming Talks on Adam Loy</title>
-    <link>https://aloy.rbind.io/talk/</link>
+    <link>/talk/</link>
     <description>Recent content in Recent &amp; Upcoming Talks on Adam Loy</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2019 Adam Loy</copyright>
     <lastBuildDate>Sun, 01 Jan 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://aloy.rbind.io/talk/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/talk/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Exploring automatic evaluation of statistical graphics</title>
-      <link>https://aloy.rbind.io/talk/2019-isu/</link>
+      <link>/talk/2019-isu/</link>
       <pubDate>Thu, 03 Oct 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://aloy.rbind.io/talk/2019-isu/</guid>
+      <guid>/talk/2019-isu/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Can&#39;t a computer do that? Exploring automatic evaluation of statistical graphics</title>
-      <link>https://aloy.rbind.io/talk/2019-gustavus/</link>
+      <link>/talk/2019-gustavus/</link>
       <pubDate>Mon, 30 Sep 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://aloy.rbind.io/talk/2019-gustavus/</guid>
+      <guid>/talk/2019-gustavus/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Visual inference for model checking</title>
-      <link>https://aloy.rbind.io/talk/jsm2019/</link>
+      <link>/talk/jsm2019/</link>
       <pubDate>Wed, 31 Jul 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://aloy.rbind.io/talk/jsm2019/</guid>
+      <guid>/talk/jsm2019/</guid>
       <description> </description>
     </item>
     
     <item>
       <title>A discussion of visual inference</title>
-      <link>https://aloy.rbind.io/talk/2018-lanl/</link>
+      <link>/talk/2018-lanl/</link>
       <pubDate>Wed, 05 Dec 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://aloy.rbind.io/talk/2018-lanl/</guid>
+      <guid>/talk/2018-lanl/</guid>
       <description> </description>
     </item>
     
     <item>
       <title>Q-Q plots: To de-trend, or not to de-trend</title>
-      <link>https://aloy.rbind.io/talk/2018-macalester/</link>
+      <link>/talk/2018-macalester/</link>
       <pubDate>Thu, 01 Nov 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://aloy.rbind.io/talk/2018-macalester/</guid>
+      <guid>/talk/2018-macalester/</guid>
       <description> </description>
     </item>
     
     <item>
       <title>Statistics in the data science curriculum</title>
-      <link>https://aloy.rbind.io/talk/2018-lads/</link>
+      <link>/talk/2018-lads/</link>
       <pubDate>Fri, 12 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://aloy.rbind.io/talk/2018-lads/</guid>
+      <guid>/talk/2018-lads/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Training Statisticians to Be Effective Instructors</title>
-      <link>https://aloy.rbind.io/talk/2017-jsm-panel/</link>
+      <link>/talk/2017-jsm-panel/</link>
       <pubDate>Mon, 31 Jul 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://aloy.rbind.io/talk/2017-jsm-panel/</guid>
+      <guid>/talk/2017-jsm-panel/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Modules for Infusing Data Science into the Statistics Curriculum</title>
-      <link>https://aloy.rbind.io/talk/2017-uscots/</link>
+      <link>/talk/2017-uscots/</link>
       <pubDate>Mon, 15 May 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://aloy.rbind.io/talk/2017-uscots/</guid>
+      <guid>/talk/2017-uscots/</guid>
       <description> </description>
     </item>
     
     <item>
       <title>Making Decisions with Data: Planning for Collaborative Courses in Data Science</title>
-      <link>https://aloy.rbind.io/talk/2017-teagle/</link>
+      <link>/talk/2017-teagle/</link>
       <pubDate>Sat, 29 Apr 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://aloy.rbind.io/talk/2017-teagle/</guid>
+      <guid>/talk/2017-teagle/</guid>
       <description> </description>
     </item>
     
