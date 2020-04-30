@@ -1,0 +1,13 @@
+base
+knitr
+ggplot2
+broom
+dplyr
+ggthemes
+nullabor
+gridExtra
+rJava
+scagnostics
+kableExtra
+ggmosaic
+datasauRus
