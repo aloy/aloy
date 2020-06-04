@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Bringing Visual Inference to the Classroom</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Adam Loy" />
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/remark-css/default-fonts.css" rel="stylesheet" />
+    <link href="libs/remark-css/hygge.css" rel="stylesheet" />
+    <link href="libs/font-awesome/css/fontawesome-all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="footer.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+
+
+layout: true
+  
+&lt;div class="my-footer"&gt;&lt;span&gt;aloy.rbind.io/slides/sdss2020&lt;/span&gt;&lt;/div&gt;
+
+---
+
+name: xaringan-title
+class: left, middle, inverse
+&lt;!-- background-image: url(figs/p_and_p_cover.png) --&gt;
+&lt;!-- background-size: cover --&gt;
+
+# Bringing Visual Inference to the Classroom
+
+## SDSS 2020
+
+&lt;!-- &lt;img src="" width="150px"/&gt; --&gt;
+
+&lt;br&gt;
+
+
+.pull-left[
+### Adam Loy 
+
+### Carleton College
+
+]
+
+.pull-right[
+.right[
+### <i class="fab  fa-github "></i> @aloy
+
+### <i class="fas  fa-globe "></i> aloy.rbind.io
+]
+]
+
+
+---
+
+## The move to a simulation-based curriculum
+
+- Since 2007, we've seen a shift to simulation-based inference in the intro course
+
+- Validation studies (Tintle et al. 2014; Maurer &amp; Lock 2014; Hildreth et al. 2018)
+
+- Implementation in other courses
+
+    + Statistical inference (Cobb 2011; Chihara &amp; Hesterberg 2011)
+
+    + Throughout curricula (Tintle et al. 2015)
+
+- All have similar approach to visualization of the inferential process
+
+---
+
+## Do Distracting Colors Influence the Time to Complete a Game?
+
+- 20 students randomly assigned to the standard game (left),&lt;br&gt; 20 students a game with a color distracter (right)
+
+- Subjects played the game in the same area with similar background noise
+
+- Collected the the time, in seconds, required to complete the game
+
+&lt;img src="img/color_distractors.png" width="58%" style="display: block; margin: auto;" /&gt;
+
+
+.footnotesize[Example taken from Kuiper and Sklar (2013).]
+
+---
+
+## Initial activity
+
+- What competing claims are being investigated in this study?
+
+- What do the sample data have to say?
+
+    &lt;img src="sdss2020_files/figure-html/unnamed-chunk-2-1.svg" style="display: block; margin: auto;" /&gt;
+
+- What evidence does the observed plot provide?
+
+---
+
+## The gap between apps and understanding
+
+![](img/statkey.gif)
+
+- Look at a few resamples
+
+- Build up a distribution that describes behavior of the statistic
+
+
+---
+
+## Using a lineup
+
+Choose which plot is most different from the others and justify your choice
+
+&lt;img src="sdss2020_files/figure-html/stroop-lineup-1.svg" width="90%" /&gt;
+
+---
+
+## Using a lineup
+
+Choose which plot is most different from the others and justify your choice
+
+&lt;img src="sdss2020_files/figure-html/stroop_lineup_highlighted-1.svg" width="90%" /&gt;
+
+---
+class: center, middle
+# What did we just do?
+
+--
+
+## We compared the **data plot** with **null plots** of samples where, by construction, there is no association
+
+--
+
+## This forces us to make decisions by comparing what we observe to what we would expect under the null
+
+--
+
+## All of this is done using "Sesame Street logic"
+
+
+---
+
+.left-column[
+&lt;br&gt;
+
+Hypotheses
+
+&lt;br&gt;
+
+Test statistic
+
+&lt;br&gt;
+
+&lt;br&gt;
+
+&lt;br&gt;
+
+Reference distribution
+
+&lt;br&gt;
+
+&lt;br&gt;
+
+&lt;br&gt;
+
+Evidence against H&lt;sub&gt;0&lt;/sub&gt; if...
+
+]
+
+.pull-left[
+.bold[Simulation-based Inference]
+
+H&lt;sub&gt;0&lt;/sub&gt;: equal means
+
+]
+
+.bold[Visual Inference]
+
+H&lt;sub&gt;a&lt;/sub&gt;: larger mean for color distractor
+
+
+
+---
+
+.left-column[
+&lt;br&gt;
+
+Hypotheses
+
+&lt;br&gt;
+
+Test statistic
+
+&lt;br&gt;
+
+&lt;br&gt;
+
+&lt;br&gt;
+
+Reference distribution
+
+&lt;br&gt;
+
+&lt;br&gt;
+
+&lt;br&gt;
+
+Evidence against H&lt;sub&gt;0&lt;/sub&gt; if...
+
+]
+
+.pull-left[
+.bold[Simulation-based Inference]
+
+H&lt;sub&gt;0&lt;/sub&gt;: equal means
+
+&lt;br&gt;
+
+`\(T(x) = \overline{x}_1 - \overline{x}_2\)`
+
+]
+
+.bold[Visual Inference]
+
+H&lt;sub&gt;a&lt;/sub&gt;: larger mean for color distractor
+
+--
+
+&lt;img src="sdss2020_files/figure-html/plot as statistic-1.svg" width="20%" /&gt;
+
+---
+
+.left-column[
+&lt;br&gt;
+
+Hypotheses
+
+&lt;br&gt;
+
+Test statistic
+
+&lt;br&gt;
+
+&lt;br&gt;
+
+&lt;br&gt;
+
+Reference distribution
+
+&lt;br&gt;
+
+&lt;br&gt;
+
+&lt;br&gt;
+
+Evidence against H&lt;sub&gt;0&lt;/sub&gt; if...
+
+]
+
+.pull-left[
+.bold[Simulation-based Inference]
+
+H&lt;sub&gt;0&lt;/sub&gt;: equal means
+
+&lt;br&gt;
+
+`\(T(x) = \overline{x}_1 - \overline{x}_2\)`
+
+&lt;br&gt;
+
+&lt;br&gt;
+
+&lt;img src="sdss2020_files/figure-html/perm-dsn-1.svg" width="45%" /&gt;
+
+
+]
+
+.bold[Visual Inference]
+
+H&lt;sub&gt;a&lt;/sub&gt;: larger mean for color distractor
+
+&lt;img src="sdss2020_files/figure-html/plot as statistic-1.svg" width="20%" /&gt;
+
+--
+
+&lt;img src="sdss2020_files/figure-html/unnamed-chunk-3-1.svg" width="33%" /&gt;
+
+---
+
+.left-column[
+&lt;br&gt;
+
+Hypotheses
+
+&lt;br&gt;
+
+Test statistic
+
+&lt;br&gt;
+
+&lt;br&gt;
+
+&lt;br&gt;
+
+Reference distribution
+
+&lt;br&gt;
+
+&lt;br&gt;
+
+&lt;br&gt;
+
+Evidence against H&lt;sub&gt;0&lt;/sub&gt; if...
+
+]
+
+.pull-left[
+.bold[Simulation-based Inference]
+
+H&lt;sub&gt;0&lt;/sub&gt;: equal means
+
+&lt;br&gt;
+
+`\(T(x) = \overline{x}_1 - \overline{x}_2\)`
+
+&lt;br&gt;
+
+&lt;br&gt;
+
+&lt;img src="sdss2020_files/figure-html/unnamed-chunk-4-1.svg" width="45%" /&gt;
+
+&lt;br&gt;
+
+
+
+the test statistic is "extreme"
+
+]
+
+.bold[Visual Inference]
+
+H&lt;sub&gt;a&lt;/sub&gt;: larger mean for color distractor
+
+&lt;img src="sdss2020_files/figure-html/plot as statistic-1.svg" width="20%" /&gt;
+
+&lt;img src="sdss2020_files/figure-html/unnamed-chunk-5-1.svg" width="33%" /&gt;
+
+--
+
+the data plot is identifiable
+
+
+---
+
+class: middle, clear
+
+# Where else is the lineup protocol useful?
+
+---
+class: middle
+
+# apophenia
+
+### the tendency to perceive a connection or meaningful pattern between unrelated or random things (such as objects or ideas)
+
+
+.footnote[
+"apophenia” Meriam-Webster Dictionary Online, September 2019, merriam-webster.com
+]
+
+
+---
+
+## Interpreting residual plots
+
+
+.pull-left[
+
+`\(\widehat{\tt heart.rate} = b_0 + b_1 \cdot {\tt duration}\)`
+
+![](sdss2020_files/figure-html/pengiun-scatter-1.svg)&lt;!-- --&gt;
+]
+
+.pull-right[
+
+Is there any evidence of structure?
+
+![](sdss2020_files/figure-html/penguin-residuals-1.svg)&lt;!-- --&gt;
+]
+
+
+---
+
+### Does the observed residual plot stand out?
+
+![](sdss2020_files/figure-html/resid lineup-1.svg)&lt;!-- --&gt;
+
+---
+class: clear
+
+### Is it rude to bring a baby on a plane?
+
+![](sdss2020_files/figure-html/bar lineup-1.svg)&lt;!-- --&gt;
+
+???
+
+Observed plot: 19
+
+---
+class: clear
+
+### Are the empirical odds linear?
+
+![](sdss2020_files/figure-html/unnamed-chunk-6-1.svg)&lt;!-- --&gt;
+
+---
+
+### Is there spatial association in this chloropleth map?
+
+&lt;img src="img/chloropleth-lineup.png" width="1270" /&gt;
+
+.footnote[Wickham et al (2010)]
+
+---
+
+## How can I create lineups?
+
+- Suite of Shiny apps: https://github.com/aloy/shiny-vizinf
+
+--
+
+- In R: `nullabor` + `tidyverse` tools
+
+    Tutorial: https://aloy.github.io/classroom-vizinf/
+
+
+```r
+library(nullabor)
+library(tidyverse)
+stroop %&gt;%
+* lineup(method = null_permute("Type"), true = ., n = 20) %&gt;%
+  ggplot(aes(x = Type, y = Time, fill = Type)) +
+  geom_boxplot(alpha = 0.5) +
+  coord_flip() +
+  facet_wrap(~ .sample, ncol = 5) +
+  scale_fill_colorblind()
+```
+
+```
+decrypt("vkyo RpNp l2 6UtlNlU2 uA")
+```
+
+.footnote[StatTLC blogpost: https://stattlc.com/2019/10/30/intro-visual-inference/]
+
+---
+
+## Conclusions
+
+- Lineup introduces students to logic behind testing without need for technical discussions
+
+- Lineup provides a framework to help students interpret new statistical graphics
+
+- Lineup is a rigorous tool for statistical investigation later in the curriculum
+
+---
+
+## References: Simulation-based curricula
+
+- Cobb (2007) The introductory statistics course: a ptolemaic curriculum? *TISE*
+
+- Cobb (2011) Teaching statistics: Some important tensions, *Chilean J. Stat.*
+
+- Chihara &amp; Hesterberg (2011) *Mathematical Statistics with Resampling and R*, Wiley
+
+- Tintle et al. (2014) Quantitative evidence for the use of simulation and randomization in the introductory statistics course, *ICOTS9*
+
+- Maurer &amp; Lock (2014) Comparison of learning outcomes for randomization-based and traditional inference curricula in a designed educational experiment, *TISE*
+
+- Tintle et al. (2015) Combating Anti-Statistical thinking using simulation-based methods throughout the undergraduate curriculum, *TAS*
+
+- Hildreth at al. (2018) Comparing student success and understanding in introductory statistics under consensus and Simulation-Based curricula, *SERJ*
+
+---
+
+## References: Visual inference
+
+- Buja et al (2009) Statistical Inference for Exploratory Data Analysis and Model Diagnostics, *Roy. Soc. Ph. Tr., A*
+
+- Majumder et al (2013) Validation of Visual Statistical Inference, Applied to Linear Models, *JASA*
+
+- Wickham et al (2010) Graphical Inference for Infovis, *InfoVis*
+
+- Hofmann et al (2012) Graphical Tests for Power Comparison of Competing Design, *InfoVis*
+
+- Loy et al (2017) Model Choice and Diagnostics for Linear Mixed-Effects Models Using Statistics on Street Corners, *JCGS*
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"slideNumberFormat": "%current%",
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
