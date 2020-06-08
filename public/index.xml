@@ -11,6 +11,15 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Bringing Visual Inference to the Classroom</title>
+      <link>/talk/2020-sdss/</link>
+      <pubDate>Thu, 04 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/talk/2020-sdss/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Exploring automatic evaluation of statistical graphics</title>
       <link>/talk/2019-isu/</link>
       <pubDate>Thu, 03 Oct 2019 00:00:00 +0000</pubDate>
@@ -140,16 +149,6 @@
       
       <guid>/talk/2017-uscots/</guid>
       <description>&lt;script async class=&#34;speakerdeck-embed&#34; data-id=&#34;d16c0455542946b68d5a068492b12a3e&#34; data-ratio=&#34;1.33333333333333&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Making Decisions with Data: Planning for Collaborative Courses in Data Science</title>
-      <link>/talk/2017-teagle/</link>
-      <pubDate>Sat, 29 Apr 2017 00:00:00 +0000</pubDate>
-      
-      <guid>/talk/2017-teagle/</guid>
-      <description>&lt;script async class=&#34;speakerdeck-embed&#34; data-id=&#34;2b583afbcd984fe9a0e281a63af63c63&#34; data-ratio=&#34;1.33333333333333&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
 </description>
     </item>
     
