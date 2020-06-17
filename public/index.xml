@@ -11,6 +11,31 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Visual Inferece for the Classroom</title>
+      <link>/project/classroom-viz-inf/</link>
+      <pubDate>Wed, 17 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/project/classroom-viz-inf/</guid>
+      <description>&lt;p&gt;In the classroom, we traditionally visualize inferential concepts related to inference using static graphics or interactive apps. For example, there is a long history of using apps to visualize sampling distributions. Recent developments in statistical graphics have created an opportunity to bring additional visualizations into the classroom to hone student understanding. Specifically, the lineup protocol (Buja et al. 2009) provides a framework for students see the difference between signal and noise. This protocol involves embedding a plot of observed data in field of null plots. This approach has proved valuable in visualizing randomization/permutation tests, diagnosing models, and even conducting valid inference when distributional assumptions break down.&lt;/p&gt;
+
+&lt;p&gt;In addition to writing about the use of visual inference in the classroom, I&amp;rsquo;ve also developed  materials to facilitate its use.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://aloy.github.io/classroom-vizinf/&#34; target=&#34;_blank&#34;&gt;Tutorial using nullabor + ggplot2 to create lineups in R&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Suite of Shiny apps for lineups in intro stats&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://shinyapps.its.carleton.edu/multi-sample-cat-app&#34; target=&#34;_blank&#34;&gt;Detecting association: Two categorical variables&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://shinyapps.its.carleton.edu/multi-sample-quant-app&#34; target=&#34;_blank&#34;&gt;Detecting association: Quantitative vs. categorical&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://shinyapps.its.carleton.edu/lm-resids-app&#34; target=&#34;_blank&#34;&gt;Exploring residual plots in SLR&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://shinyapps.its.carleton.edu/qqplots-app&#34; target=&#34;_blank&#34;&gt;Interpreting Q-Q plots&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Bringing Visual Inference to the Classroom</title>
       <link>/talk/2020-sdss/</link>
       <pubDate>Thu, 04 Jun 2020 00:00:00 +0000</pubDate>
@@ -140,16 +165,6 @@
       
       <guid>/publication/2017-jcgs/</guid>
       <description></description>
-    </item>
-    
-    <item>
-      <title>Modules for Infusing Data Science into the Statistics Curriculum</title>
-      <link>/talk/2017-uscots/</link>
-      <pubDate>Mon, 15 May 2017 00:00:00 +0000</pubDate>
-      
-      <guid>/talk/2017-uscots/</guid>
-      <description>&lt;script async class=&#34;speakerdeck-embed&#34; data-id=&#34;d16c0455542946b68d5a068492b12a3e&#34; data-ratio=&#34;1.33333333333333&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
-</description>
     </item>
     
   </channel>
