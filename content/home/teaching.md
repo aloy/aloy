@@ -14,15 +14,16 @@ weight = 10
 
 +++
 
-2019-2020 academic year:
+2020-2021 academic year:
 
-- Math 315: Bayesian statistics (Fall)
-- Math 280: Statistical consulting (Fall, Winter, Spring)
-- Math 285: Introduction to data science (Spring)
+- Math 240: Probability (two sections this fall)
+- I'm on sabbatical during the winter and spring
 
 Past courses:
 
-- Math 215: Introduction to statistics
-- Math 245: Applied regression
-- Math 265: Probability
-- Math 275: Introduction to statistical inference
+- Stat 120: Introduction to statistics
+- Stat 220: Introduction to data science
+- Stat 230: Applied regression
+- Stat 250: Introduction to statistical inference
+- Stat 285: Statistical consulting
+- Stat 340: Bayesian statistics

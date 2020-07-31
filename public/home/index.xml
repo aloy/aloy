@@ -2,78 +2,78 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Homes on Adam Loy</title>
-    <link>/home/</link>
+    <link>https://aloy.rbind.io/home/</link>
     <description>Recent content in Homes on Adam Loy</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2019 Adam Loy</copyright>
     <lastBuildDate>Wed, 20 Apr 2016 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/home/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://aloy.rbind.io/home/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title></title>
-      <link>/home/about/</link>
+      <link>https://aloy.rbind.io/home/about/</link>
       <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
       
-      <guid>/home/about/</guid>
+      <guid>https://aloy.rbind.io/home/about/</guid>
       <description>About me Hi! I&amp;rsquo;m an Assistant Professor of Statistics in the Department of Mathematics and Statistics at Carleton College. I teach statistics at all levels of the curriculum and am passionate about communicating the beauty and power of modern statistical methods to my students. My research focuses on incorporating realistic computation and visualization into the classroom, exploring the potential of visual inference, developing better visualizations to explore complex models, and developing useful and useable R packages.</description>
     </item>
     
     <item>
       <title>Teaching</title>
-      <link>/home/teaching/</link>
+      <link>https://aloy.rbind.io/home/teaching/</link>
       <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
       
-      <guid>/home/teaching/</guid>
-      <description>2019-2020 academic year:
- Math 315: Bayesian statistics (Fall) Math 280: Statistical consulting (Fall, Winter, Spring) Math 285: Introduction to data science (Spring)  Past courses:
- Math 215: Introduction to statistics Math 245: Applied regression Math 265: Probability Math 275: Introduction to statistical inference  </description>
+      <guid>https://aloy.rbind.io/home/teaching/</guid>
+      <description>2020-2021 academic year:
+ Math 240: Probability (two sections this fall) I&amp;rsquo;m on sabbatical during the winter and spring  Past courses:
+ Stat 120: Introduction to statistics Stat 220: Introduction to data science Stat 230: Applied regression Stat 250: Introduction to statistical inference Stat 285: Statistical consulting Stat 340: Bayesian statistics  </description>
     </item>
     
     <item>
       <title>Recent Publications</title>
-      <link>/home/publications/</link>
+      <link>https://aloy.rbind.io/home/publications/</link>
       <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
       
-      <guid>/home/publications/</guid>
+      <guid>https://aloy.rbind.io/home/publications/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Recent Talks</title>
-      <link>/home/talks/</link>
+      <link>https://aloy.rbind.io/home/talks/</link>
       <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
       
-      <guid>/home/talks/</guid>
+      <guid>https://aloy.rbind.io/home/talks/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Projects</title>
-      <link>/home/projects/</link>
+      <link>https://aloy.rbind.io/home/projects/</link>
       <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
       
-      <guid>/home/projects/</guid>
+      <guid>https://aloy.rbind.io/home/projects/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Recent Posts</title>
-      <link>/home/posts/</link>
+      <link>https://aloy.rbind.io/home/posts/</link>
       <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
       
-      <guid>/home/posts/</guid>
+      <guid>https://aloy.rbind.io/home/posts/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Contact</title>
-      <link>/home/contact/</link>
+      <link>https://aloy.rbind.io/home/contact/</link>
       <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
       
-      <guid>/home/contact/</guid>
+      <guid>https://aloy.rbind.io/home/contact/</guid>
       <description></description>
     </item>
     
