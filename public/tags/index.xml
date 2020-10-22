@@ -2,76 +2,76 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Adam Loy</title>
-    <link>/tags/</link>
+    <link>https://aloy.rbind.io/tags/</link>
     <description>Recent content in Tags on Adam Loy</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2019 Adam Loy</copyright>
     <lastBuildDate>Sun, 01 Jan 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://aloy.rbind.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Content tagged as &#39;Academic&#39;</title>
-      <link>/tags/academic/</link>
+      <link>https://aloy.rbind.io/tags/academic/</link>
       <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
       
-      <guid>/tags/academic/</guid>
+      <guid>https://aloy.rbind.io/tags/academic/</guid>
       <description>Here is a list of all the content that has been tagged as academic.</description>
     </item>
     
     <item>
       <title>Data Science</title>
-      <link>/tags/data-science/</link>
+      <link>https://aloy.rbind.io/tags/data-science/</link>
       <pubDate>Sat, 21 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>/tags/data-science/</guid>
+      <guid>https://aloy.rbind.io/tags/data-science/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Linear Mixed Effects Models</title>
-      <link>/tags/linear-mixed-effects-models/</link>
+      <link>https://aloy.rbind.io/tags/linear-mixed-effects-models/</link>
       <pubDate>Sat, 21 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>/tags/linear-mixed-effects-models/</guid>
+      <guid>https://aloy.rbind.io/tags/linear-mixed-effects-models/</guid>
       <description></description>
     </item>
     
     <item>
       <title>R</title>
-      <link>/tags/r/</link>
+      <link>https://aloy.rbind.io/tags/r/</link>
       <pubDate>Sat, 21 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>/tags/r/</guid>
+      <guid>https://aloy.rbind.io/tags/r/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Resampling</title>
-      <link>/tags/resampling/</link>
+      <link>https://aloy.rbind.io/tags/resampling/</link>
       <pubDate>Sat, 21 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>/tags/resampling/</guid>
+      <guid>https://aloy.rbind.io/tags/resampling/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Stat Ed</title>
-      <link>/tags/stat-ed/</link>
+      <link>https://aloy.rbind.io/tags/stat-ed/</link>
       <pubDate>Wed, 17 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>/tags/stat-ed/</guid>
+      <guid>https://aloy.rbind.io/tags/stat-ed/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Viz</title>
-      <link>/tags/viz/</link>
+      <link>https://aloy.rbind.io/tags/viz/</link>
       <pubDate>Wed, 17 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>/tags/viz/</guid>
+      <guid>https://aloy.rbind.io/tags/viz/</guid>
       <description></description>
     </item>
     
