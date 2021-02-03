@@ -39,4 +39,4 @@ In addition to writing about the use of visual inference in the classroom, I've 
   + [Detecting association: Two categorical variables](http://shinyapps.its.carleton.edu/multi-sample-cat-app)
   + [Detecting association: Quantitative vs. categorical](http://shinyapps.its.carleton.edu/multi-sample-quant-app)
   + [Exploring residual plots in SLR](http://shinyapps.its.carleton.edu/lm-resids-app)
-  + [Interpreting Q-Q plots](http://shinyapps.its.carleton.edu/qqplots-app)
+  + [Interpreting Q-Q plots](http://shinyapps.its.carleton.edu/qqplots)

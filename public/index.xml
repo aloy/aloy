@@ -12,6 +12,15 @@
     
     <item>
       <title>Bringing Visual Inference to the Classroom</title>
+      <link>https://aloy.rbind.io/talk/2020-jsm/</link>
+      <pubDate>Wed, 05 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://aloy.rbind.io/talk/2020-jsm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Bringing Visual Inference to the Classroom</title>
       <link>https://aloy.rbind.io/publication/2020-jse/</link>
       <pubDate>Fri, 19 Jun 2020 00:00:00 +0000</pubDate>
       
@@ -38,7 +47,7 @@
 &lt;li&gt;&lt;a href=&#34;http://shinyapps.its.carleton.edu/multi-sample-cat-app&#34; target=&#34;_blank&#34;&gt;Detecting association: Two categorical variables&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://shinyapps.its.carleton.edu/multi-sample-quant-app&#34; target=&#34;_blank&#34;&gt;Detecting association: Quantitative vs. categorical&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://shinyapps.its.carleton.edu/lm-resids-app&#34; target=&#34;_blank&#34;&gt;Exploring residual plots in SLR&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://shinyapps.its.carleton.edu/qqplots-app&#34; target=&#34;_blank&#34;&gt;Interpreting Q-Q plots&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://shinyapps.its.carleton.edu/qqplots&#34; target=&#34;_blank&#34;&gt;Interpreting Q-Q plots&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
@@ -155,15 +164,6 @@
       <pubDate>Sat, 21 Oct 2017 00:00:00 +0000</pubDate>
       
       <guid>https://aloy.rbind.io/project/lmeresampler/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Training Statisticians to Be Effective Instructors</title>
-      <link>https://aloy.rbind.io/talk/2017-jsm-panel/</link>
-      <pubDate>Mon, 31 Jul 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://aloy.rbind.io/talk/2017-jsm-panel/</guid>
       <description></description>
     </item>
     
