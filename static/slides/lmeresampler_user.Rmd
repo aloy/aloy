@@ -1,0 +1,263 @@
+---
+title: "Bootstrapping Multilevel Models in R using `lmeresampler`"
+author: "Adam Loy"
+date: "[aloy.rbind.io/slides/useR2021](https://aloy.rbind.io/slides/useR2021)"
+header-includes: 
+output:
+  xaringan::moon_reader:
+    css: [useR, useR-fonts]
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, dev = 'svg')
+library(tidyverse)
+```
+
+## Motivation
+
+
+- Van der Leeden et al. (2008) point out burden is largely on users to implement bootstrap procedures
+
+- 2009 useR! talk by Sánchez-Espigares & Ocaña outlined a framework
+
+- `lme4::bootMer()` implements select bootstrap procedures
+
+
+
+???
+
+In 2008, Van der Leeden and coauthors pointed out that many bootstrap procedures were unavailable in R, so users needed to program their own bootstraps if they wanted something other than the parametric bootstrap. In 2009, an R package was presented at useR! outlining a comprehensive framework for bootstrapping multilevel models; unfortunately, the package never made it's way to CRAN and the project appears to have been abandoned. Since that time, there have been a few additions to `lme4` in terms of bootstrapping capabilities, but numerous procedures are still missing. lmeresampler implements many of the missing procedures.
+
+<!-- My interest in bootstrapping multilevel models comes form my 2017 paper with Heike Hofmann and Di Cook where we propose simulation-based graphical diagnostics for this model class built on the lineup protocol for visual inference. In order to implement this diagnostic approach, we need to be able to easily simulated from a fitted model. -->
+
+
+---
+
+### `lmeresampler`
+
+Makes a wider set of bootstrap algorithms available to `nlme` and `lme4` users
+
+  + parametric*
+  
+  + residual (semi-parametric)*
+  
+  + cases (non-parametric)*
+  
+  + random-effects block
+  
+  + wild
+
+<br>
+
+<br>
+
+
+.footnote[
+`*` = Also works with model fit via `lme4::glmer()`
+]
+  
+???
+
+lmeresampler provides users with easy access to a larger set of bootstrap procedures. Currently, it implements five procedures for Gaussian response models, including the parametric, residual, cases, random-effects block, and wild bootstraps. The parametric, residual, and cases bootstraps are also available for generalized linear mixed-effects models fit via `glmer`.
+  
+---
+
+## JSP data
+
+
+```{r message=FALSE}
+library(lmeresampler)
+as_tibble(jsp728) %>% print(width = 70)
+```
+
+???
+
+As a first example, let's consider the junior school project data set provided by lmeresampler, which is discussed in Goldstein's textbook on multilevel modeling. The data set is comprised of measurements taken on 728 elementary school students across 48 schools in London.
+
+---
+
+## Fitting a random intercept model
+
+```{r message=FALSE}
+library(lme4)
+jsp_mod <- lmer(
+  mathAge11 ~ mathAge8 + gender + class + (1 | school), 
+  data = jsp728
+)
+```
+
+
+???
+
+Suppose we wish to fit a random intercept model explored by Goldstein where the math score at age 8, gender, and the father's social class were used to describe math scores at age 11. Here, we fit this model using `lmer()` and store the results in the jsp_mod object.
+
+
+---
+
+## Residual bootstrap
+
+Carpenter, Goldstein & Rasbash (2003) proposed a residual bootstrap for multilevel models
+
+1. Fit the model via `lme4::lmer()` or `nlme::lme()`
+
+2. Extract the error terms and random effects.
+
+3. Mean-center and "reflate" them, so that the empirical covariance matrices of these residual quantities match the estimated covariance matrices prior to resampling.
+
+4. Resample from the each residual quantity and generate bootstrap responses.
+
+5. Refit the model and extract the quantities of interest.
+
+6. Repeat 3-5 B times.
+
+
+???
+
+If we suspect possible distributional misspecification in the model, then a robust alternative to typical parametric infernce is the residual bootstrap proposed by Carpenter, Goldstein and Rasbash. The bootstrap procedure is similar to the residual bootstrap from classical regression, but there are two types of residuals: error terms (or conditional residuals) and random effects. In addition, before resampling the residual quantities, we center and reflate them. Carpenter et al. termed "reflation" as the adjustment to the residuals to ensure the empirical covariance matrices match the estimated covariance matrices.
+
+
+---
+
+## `bootstrap()`
+
+`lmeresampler` provides a unified `bootstrap()` function, as well as functions for each procedure
+
+```{r, echo=FALSE, message=FALSE}
+library(lme4)
+library(lmeresampler)
+library(ggplot2)
+```
+
+```{r include=FALSE, cache=TRUE}
+# Bootstrap
+stime <- system.time({resid_boot <- bootstrap(
+  jsp_mod,              # lme4/nlme output 
+  .f = fixef,           # user-specified function
+  type = "parametric",  # bootstrap algorithm
+  B = 10000             # No. resamples
+)
+})
+```
+
+
+```{r eval=FALSE}
+resid_boot <- bootstrap(
+  jsp_mod,            # lme4/nlme output 
+  .f = fixef,         # user-specified function
+  type = "residual",  # bootstrap algorithm
+  B = 10000           # No. resamples
+)
+```
+
+???
+
+The `bootstrap()` command provides a unified interface to all of the bootstrap procedures. For example, we can easily run a residual bootstrap for our fitted model using the bootstrap command, specifying the function that calculates the quantities of interest, the type of bootstrap, and the number of bootstrap replicates. Here, we're interested in extracting the fixed effects via fixef() and we ran 10000 bootstrap replicates.
+
+---
+
+##`summary()`
+
+```{r error=FALSE}
+summary(resid_boot)
+```
+
+???
+
+bootstrap returns an object of class lmeresamp, and we've provided familiar methods to explore the results. For example, the summary function allows us to quickly explore the mean, standard error, and bias of our results. It also informs us of any warnings encountered along the way, such as convergence issues. 
+
+---
+
+## `confint()`
+
+```{r}
+confint(resid_boot, type = "basic")
+```
+
+???
+
+The confint function provides normal, basic, and percentile bootstrap confidences intervals for all of the parameters by default. Here, we calculate only basic bootstrap intervals by setting type to "basic".
+
+The plot() function works similarly, creating a halfeye plot for the specified parameter.
+
+
+
+---
+
+## Parallelization
+
+`combine_lmeresamp()` allows you to implement paralleization via `foreach`
+
+```{r eval=FALSE}
+library(foreach)
+library(doParallel)
+
+no_cores <- 5
+cl <- makeCluster(no_cores, type = "FORK")
+registerDoParallel(cores = no_cores)
+
+boot_parallel <- foreach(
+  B = rep(2000, 5), 
+  .combine = combine_lmeresamp,
+  .packages = c("lmeresampler", "lme4")) %dopar% {
+    bootstrap(jsp_mod, .f = fixef, type = "parametric", B = B)
+  }
+stopCluster(cl)
+```
+ 
+```{r include=FALSE, cache=TRUE}
+library(foreach)
+library(doParallel)
+
+no_cores <- 5
+cl <- makeCluster(no_cores, type = "FORK")
+registerDoParallel(cores = no_cores)
+
+ptime <- system.time({boot_parallel <- foreach(
+  B = rep(2000, 5), 
+  .combine = combine_lmeresamp, 
+  .packages = c("lmeresampler", "lme4")) %dopar% {
+    bootstrap(jsp_mod, .f = fixef, type = "parametric", B = B)
+  }
+})
+
+stopCluster(cl)
+
+```
+
+???
+
+Bootstrapping is a computationally demanding task, but is easily run in parallel since each iteration of the bootstrap requires no interaction with other iterations. We did not implement parallel processing within lmeresampler, rather we provde the combine_lmeresamp so that the user can implement parallelization via the foreach package. This provides flexibility to the user, allowing them to choose the type of cluster based on their situation and hardware setup.
+
+In this example, I'm using a small fork cluster with five cores. Within the foreach call, I specify that B = 2000 replicates should be run on each of the five cores and the the combine_lmeresamp() function should be used to combine the results. Then, I use the dopar operator to call the bootstrap command.
+
+On my laptop, the runtime decreased by a factor about 4.4.
+
+
+---
+
+## For more information
+
+CRAN: https://cran.r-project.org/web/packages/lmeresampler/index.html
+
+Github: https://aloy.github.io/lmeresampler/
+
+Preprint: available on [arXiv](https://arxiv.org/a/loy_a_1.html)
+
+???
+
+Thanks for watching my pitch! 
+
+I've only just scratched the surface of bootstrapping using lmeresampler, so please check out the package on either CRAN or Github to explore. Also, you can read a preprint detailing the functionality and a few use cases on the arxiv. For example, I illustrate how lmeresampler makes it easy to create lineup diagnostic plots for fitted models.
+
+---
+
+## References
+J. R. Carpenter, H. Goldstein, and J. Rasbash. A novel bootstrap procedure for assessing the relationship between class size and achievement. *Journal of the Royal Statistical Society, Series C*, 52(4):431–443, 2003. URL https://doi.org/10.1111/1467-9876.00415. 
+
+H. Goldstein. *Multilevel Statistical Models*. John Wiley & Sons, Ltd., West Sussex, 4 edition, 2011. URL https://doi.org/10.1002/9780470973394.
+
+R. Van der Leeden, E. Meijer, and F. M. Busing. Resampling multilevel models. In J. de Leeuw and E. Meijer, editors, *Handbook of Multilevel Analysis*, pages 401–433. Springer New York, 2008. URL https://doi.org/10.1007/978-0-387-73186-5_11.
